@@ -99,7 +99,7 @@ gulp.task('sass', function() {
         }))
         .pipe(sass({
             // Sass related options go here.
-            // See more options here: https://github.com/sass/node-sass#options
+            // more options here: https://github.com/sass/node-sass#options
             outputStyle: 'expanded'
         }))
         .pipe(autoprefixer({
