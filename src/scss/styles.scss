@@ -1,0 +1,39 @@
+// @import 'vendors/bootstrap';
+// @import 'vendors/jquery-ui';
+
+@import 'base/reset-normalize';
+@import 'libraries/libs';
+
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/mixins';
+@import 'utils/placeholders';
+
+@import 'base/base';
+@import 'base/colors';
+@import 'base/typography';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar-menu';
+@import 'layout/forms';
+
+@import 'components/buttons';
+@import 'components/slider';
+@import 'components/galleries';
+@import 'components/banners';
+@import 'components/media';
+@import 'components/cover';
+
+@import 'sprites/sprites';
+
+@import 'pages/home';
+@import 'pages/single-product';
+
+// @import 'themes/theme';
+// @import 'themes/admin';
+
+
+
