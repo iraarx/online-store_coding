@@ -66,7 +66,7 @@ gulp.task('server', function() {
     // gulp.watch('src/*.html', ['watch-html']);
     gulp.watch(['src/pug/pages/*.pug', 'src/pug/pages/elements/*.pug', 'src/pug/layout/*.pug'], ['watch-pug']);
     gulp.watch('src/scss/**/*.scss', ['sass']);
-    gulp.watch('src/js/lib/**/*.js', ['watch-js']);
+    gulp.watch('src/js/**/*.js', ['watch-js']);
     gulp.watch(['src/img/**/*.{png,jpg,gif,svg,ico}', '!src/img/sprites/**'], ['watch-img']);
     gulp.watch('src/img/sprites/sprites_svg/**', ['sprites-svg']);
 });
@@ -126,7 +126,7 @@ gulp.task('js', ['lint-js'], function() {
             // fontawesome
             'node_modules/@fortawesome/fontawesome-free/js/fontawesome.js',
             // main scripts
-            'src/js/lib/**/*.js'
+            'src/js/**/*.js'
        
         ])
         .pipe(concatJS('scripts.js'))
@@ -140,7 +140,7 @@ gulp.task('js', ['lint-js'], function() {
 // Check JS code for errors.
 gulp.task('lint-js', function() {
     return gulp
-        .src('src/js/lib/**/*.js')
+        .src('src/js/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
         .pipe(jshint.reporter('fail')); // task fails on JSHint error
@@ -188,11 +188,6 @@ gulp.task('reset', function() {
  * Watch tasks.
  * ------------------------------------------------------------------------- */
 
-// HTML.
-// gulp.task('watch-html', ['html'], function(done) {
-//     browser.reload();
-//     done();
-// });
 gulp.task('watch-pug', ['pug'], function(done) {
     browser.reload();
     done();
