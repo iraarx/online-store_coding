@@ -1,0 +1,49 @@
+.sales-banner__img, .banner-sunglasses__img, .banner-summer-collection__img, .banner-new-arrivals__img, .banner-men-shoes__img, .banner-super-discount__img{
+    width:100%;
+}
+.look-book-banner{
+    background-color: $main-background-color;
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    margin-top: 15vh;
+    &__img-wrap{
+        flex:6;
+        display: flex;
+        justify-content: center;
+    }
+    &__figure{
+        width: 80%;
+        height: auto;
+    }
+    &__img{
+        width: 100%;
+    }
+    &__caption-wrap{
+        flex:6;
+        display: flex;
+        justify-content: center;
+    }
+    &__caption{
+        display: flex;
+        flex-direction: column;
+    }
+    &__top-text{
+        @include font-type($main-font, 20px, 24px, $main-font-letter-spacing, 300);
+        text-transform: uppercase;
+        align-self: flex-start;
+    }
+    &__title{
+        @include font-type($lookBook-font, $lookBook-font-size, $lookBook-font-line-height, $lookBook-font-letter-spacing, $lookBook-font-weight);
+        text-transform: uppercase;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__bottom-text{
+        @extend .look-book-banner__top-text;
+        text-transform: lowercase;
+        align-self: flex-end;
+    }
+}
+

@@ -1,0 +1,56 @@
+block config
+	include config.pug
+	include mixins.pug
+
+doctype
+html( lang="en" )
+	head
+		title
+			block title
+				//- Variable used in text via interpolation
+				| #{PageTitle}
+		
+		meta( charset='utf-8' )
+		meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+		meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+		//- Meta description drawn from config file
+		meta( name='description', content=MetaDesc )
+				
+		block stylesheets
+			link( href='css/styles.css', rel='stylesheet', type='text/css' )
+	
+	body
+		.container-fluid
+			.row.justify-content-center
+				// Sidebar menu
+				.col-lg-2.col-sm-6
+					aside.sidebar
+						include ../pages/elements/sidebar-nav.pug
+				//Shopping-bag
+				.col-lg-1.col-sm-6.order-last
+					aside.cart
+						// Bag button
+						a(class='cart__link', id='cart', href='#', rel='nofollow' )
+							i.icon.shopping-bag.cart__icon
+								span.cart__number 2	
+				// Header and main wrapper
+				.col-lg-9.col-sm-12
+					.header-main__wrapper
+						// Header
+						header.header
+							include ../pages/elements/header-nav.pug
+						// Main 
+						main.main-content
+							//- Content here
+							block content
+						// Footer
+						include ../pages/elements/footer.pug
+
+		script(src='js/scripts.min.js') 
+			
+			
+			 
+
+
+
+		

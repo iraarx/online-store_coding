@@ -1,0 +1,146 @@
+extends ../layout/docwrapper
+
+//- Override any config settings by appending to the config block
+append config
+	- var PageTitle = 'Home page'
+	- var MetaDesc = 'Home page e-commerce'
+
+block content
+	//- include:markdown content/external_markdown.md
+	//- include content/external_html.html
+	// Slider
+	section.main-slider
+		.row.align-items-center
+			.col-lg-12
+				.main-slider__wrapper.owl-carousel
+					// Slider item-1
+					//- mixin: main-slider__item(imageUrl, imageAlt, logoUrl, logoAlt, productName, brandLink, brandName, itemPrice, itemDiscount, addURL)
+					+main-slider__item('img/slider_shoes_1.png', 'shoes', 'img/logo2.png', 'capre diem', 'Mens Shoes', 'brand.html', 'Findgoodstoday.co', '$499.00 | Discount', '199', 'link.html')
+					// Slider item-2
+					+main-slider__item('img/slider_6.png', 'handwatch', 'img/logo2.png', 'capre diem', 'Mens Hand Watch', 'brand.html', 'Findgoodstoday.co', '$499.00 | Discount', '199', 'link.html')
+					// Slider item-3
+					+main-slider__item('img/slider_4.png', 'bag', 'img/logo2.png', 'capre diem', 'Ladies Handbags', 'brand.html', 'Findgoodstoday.co', '$499.00 | Discount', '199', 'link.html')
+					// Slider item-4
+					+main-slider__item('img/slider_5.png', 'shoes', 'img/logo2.png', 'capre diem', 'Ladies Shoes', 'brand.html', 'Findgoodstoday.co', '$499.00 | Discount', '199', 'link.html')
+					// Slider item-5
+					+main-slider__item('img/slider_7.png', 'iwatch', 'img/logo2.png', 'capre diem', 'iWatch', 'brand.html', 'Findgoodstoday.co', '$499.00 | Discount', '199', 'link.html')
+
+	// Gallery_new_arrivals		
+	section.gallery-products
+		.row
+			// item-1
+			.col-lg-3.col-md-4.col-sm-6.gallery-products__item
+				//- mixin item_figure(imageUrl, imageAlt, title, price, discount)
+				+gallery-products__item('img/gallery-1.png', 'jaquet', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00')
+			// item-2
+			.col-lg-3.col-md-4.col-sm-6.gallery-products__item
+				+gallery-products__item('img/gallery-2.png', 'coat', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00')
+			// item-3
+			.col-lg-3.col-md-4.col-sm-6.gallery-products__item
+				+gallery-products__item('img/gallery-3.png', 't-shirt', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00')
+			// item-4
+			.col-lg-3.col-md-4.col-sm-6.gallery-products__item
+				+gallery-products__item('img/gallery-4.png', 'wristwatch', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00')
+			// item-5
+			.col-lg-3.col-md-4.col-sm-6.gallery-products__item
+				+gallery-products__item('img/gallery-5.png', 'wristwatch', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00')
+			// item-6
+			.col-lg-3.col-md-4.col-sm-6.gallery-products__item
+				+gallery-products__item('img/gallery-6.png', 'clutch', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00')
+			// item-7
+			.col-lg-3.col-md-4.col-sm-6.gallery-products__item
+				+gallery-products__item('img/gallery-7.png', 'sneakers', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00')
+			// item-8
+			.col-lg-3.col-md-4.col-sm-6.gallery-products__item
+				+gallery-products__item('img/gallery-8.png', 'cloack', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00')
+		.row
+			.col-lg-12
+				a(class='gallery-products__more-btn btn--bordered-fullwidth', href='link.html', rel='nofollow' ) Load more	
+	
+	// Banner Look Book
+	section.look-book-banner
+		//- mixin look-book-banner(imageUrl, imageAlt, topText, title, bottomText)
+		+look-book-banner('img/banner-1.png', 'look book 2018', '2018 Fashion', 'Look book', 'checkout the fresh collection')
+			
+	// Sales section
+	section.gallery-sales
+		.row
+			.col-lg-12
+				+section-title('Our Sales')
+		.row
+			.col-lg-3.col-md-4.col-sm-6
+				//- mixin sales__banner(imageUrl, imageAlt, year, persent, title, tiitleSpan, bottomText)
+				.gallery-sales__banner
+					+gallery-sales__banner('img/banner-2.png', '20% off Man and woman fassion collection', '2018', '20%', 'Man & Women', 'Fassion Collection', '*Terms and condition applied')
+			.col-lg-9
+				.gallery-sales__products
+					.row
+						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
+							//- mixin item_figure_sale(imageUrl, imageAlt, title, price, discountRate)
+							+gallery-sales__item('img/sales-1.png', 'sport collection', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00', '10% Off')
+						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
+							+gallery-sales__item('img/sales-2.png', 'sport collection', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00', '10% Off')
+						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
+							+gallery-sales__item('img/sales-3.png', 'sport collection', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00', '10% Off')
+						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
+							+gallery-sales__item('img/sales-4.png', 'sport collection', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00', '10% Off')
+						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
+							+gallery-sales__item('img/sales-5.png', 'sport collection', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00', '10% Off')
+						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
+							+gallery-sales__item('img/sales-6.png', 'sport collection', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00', '10% Off')
+						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
+							+gallery-sales__item('img/sales-7.png', 'sport collection', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00', '10% Off')
+						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
+							+gallery-sales__item('img/sales-8.png', 'sport collection', 'Schoone sports collection essentials', '$499.00 | Discount', '$199.00', '10% Off')
+
+	// Advertisements section
+	section.advertisements
+		.row
+			.col-lg-12
+				+section-title('Advertisments')
+		.row
+			.col-lg-6
+				//- banner-sunglasses(imageUrl, imageAlt, title, underPrice, collection)
+				+banner-sunglasses('img/banner-3.png', 'sunglasses', 'Sunglasses', 'Under $100!', 'Summer Collection')
+				
+			.col-lg-3
+				+banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer Collection', '2018', '0852FASH')
+
+			.col-lg-3
+				//- banner-new-arrivals(imageUrl, imageAlt, title, year, persent, lableText)
+				+banner-new-arrivals('img/banner-5.png', 'bag', 'New arrivals', '2015', '%5', 'additional discount')
+
+			.col-lg-6
+				//- banner-men-shoes(imageUrl, imageAlt, title, titleSpan)
+				+banner-men-shoes('img/banner-6.png', 'meh shoes', 'Men shoes', 'collections')
+
+			.col-lg-6
+				//- banner-super-discount(imageUrl, imageAlt, title, titleSpan1, titleSpan2, persent)
+				+banner-super-discount('img/banner-7.png', 'super discount weekends 45%', 'Super', 'Discount', 'Weekends', '45%')
+					
+	
+	
+		
+
+			
+
+							
+	
+	
+				
+				
+			
+
+
+
+
+
+
+
+
+			
+				
+		
+		
+
+		

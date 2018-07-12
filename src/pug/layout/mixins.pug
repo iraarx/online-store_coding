@@ -1,0 +1,158 @@
+//- Nested mixin for mixin header__nav - dropdown menu
+mixin dropdown_menu(menu_items)
+	ul.dropdown-menu
+		each top_item in menu_items
+			li.dropdown-menu__submenu-item 
+				if top_item.child
+					ul.dropdown-menu__submenu-list
+						each child_item in top_item.child
+							li.dropdown-menu__submenu-list-item
+								+droplinks(child_item)
+
+//- This mixin generates the links
+mixin droplinks(item)
+	- var linkatts = { 'href': item.link }
+	a(class="dropdown-menu__list-link")&attributes(linkatts)= item.title
+
+//- This mixin iterates through and creates each menu item
+mixin sidebar__nav-list(menu_items)
+	ul.sidebar__nav-list
+		each top_item in menu_items
+			li.sidebar__list-item
+				+navlinks(top_item)
+					                                
+//- This mixin generates the links
+mixin navlinks(item)
+	- var linkatts = { 'href': item.link }
+	a(class="sidebar__list-link")&attributes(linkatts)= item.title
+
+
+//- Main slider item mixin
+mixin main-slider__item(imageUrl, imageAlt, logoUrl, logoAlt, productName, brandLink, brandName, itemPrice, itemDiscount, addUrl)
+	.main-slider__item
+		// slider img
+		.main-slider__img-wrapper
+			figure.main-slider__figure
+				img.main-slider__img(src=imageUrl, alt=imageAlt)
+		// slider caption
+		.main-slider__info
+			.main-slider__logo-wrapper
+				img.main-slider__logo(src=logoUrl, alt=logoAlt)
+			p.main-slider__description= productName + " - " 
+				span.main-slider__brand
+					a(href=brandLink, rel='nofollow')= brandName
+			p.main-slider__price= itemPrice 
+				span.main-slider__discount= itemDiscount
+			.main-slider__add-btn
+				a.main-slider__add-link.btn--bordered(href=addUrl, rel='nofollow') Add to cart
+
+//- Product gallery new arrivals items			
+mixin gallery-products__item(imageUrl, imageAlt, title, price, discount)
+	figure.gallery-products__figure
+		img.gallery-products__img(src=imageUrl, alt=imageAlt)
+		figcaption.gallery-products__figcaption
+			p.gallery-products__title= title
+			p.gallery-products__price= price
+				span.gallery-products__discount= discount
+
+//- Look-book-banner
+mixin look-book-banner(imageUrl, imageAlt, topText, title, bottomText)
+	.look-book-banner__img-wrap
+		.look-book-banner__figure
+			img.look-book-banner__img(src=imageUrl, alt=imageAlt)
+	.look-book-banner__caption-wrap
+		.look-book-banner__caption
+			span.look-book-banner__top-text= topText
+			h2.look-book-banner__title= title 
+			span.look-book-banner__bottom-text= bottomText
+
+//- sales__banner
+mixin gallery-sales__banner(imageUrl, imageAlt, year, persent, title, tiitleSpan, bottomText)
+	figure.sales-banner
+		img.sales-banner__img(src=imageUrl, imageAlt,)
+		figcaption.sales-banner__figcaption
+			.sales-banner__frame-block
+				small.sales-banner__year= year 
+				p.sales-banner__persent= persent 
+					span.sales-banner__persent-text off on
+				h3.sales-banner__title= title 
+					span.sales-banner__title-span= tiitleSpan 
+				a.sales-banner__arrow(href='link.html', target='_blank', rel='nofollow')
+					i.icon.up-arrow
+			p.sales-banner__bottom-text *Terms and condition applied
+
+//-Sales gallery items
+mixin gallery-sales__item(imageUrl, imageAlt, title, price, discount, discountRate)
+	figure.gallery-sales__figure
+		img.gallery-sales__img(src=imageUrl, alt=imageAlt)
+		figcaption.gallery-sales__figcaption
+			p.gallery-sales__title= title
+			p.gallery-sales__price= price
+				span.gallery-sales__discount= discount
+			.gallery-sales__lable.discount-lable-rectangle
+				p= discountRate
+
+//- Section title mixin
+mixin section-title(title)
+	hgroup.section-title
+		h2.section-title__title= title
+		h3.section-title__subtitle Awesome shop
+
+//- Banners
+
+//- banner-sunglasses
+mixin banner-sunglasses(imageUrl, imageAlt, title, underPrice, collection)
+	figure.banner-sunglasses
+		img.banner-sunglasses__img(src=imageUrl, alt=imageAlt)
+		figcaption.banner-sunglasses__figcaption
+			h3.banner-sunglasses__title= title
+			p.banner-sunglasses__under-price= underPrice
+			h4.banner-sunglasses__collection= collection
+			p.banner-sunglasses__text 
+				|There are many variations of passages of Lorem Ipsum 
+				br
+				|available, but the majority have suffered alteration in some.
+
+//- banner-summer-collection
+mixin banner-summer-collection(imageUrl, imageAlt, title, year, code)
+	figure.banner-summer-collection
+		img.banner-summer-collection__img(src=imageUrl, alt=imageAlt)
+		figcaption.banner-summer-collection__figcaption
+			h4.banner-summer-collection__title= title 
+			p.banner-summer-collection__year= year
+			.banner-summer-collection__product-code
+				p.banner-summer-collection__code-text code
+					span.banner-summer-collection__code-number= code
+
+//- banner-new-arrivals
+mixin banner-new-arrivals(imageUrl, imageAlt, title, year, persent, lableText)
+	figure.banner-new-arrivals
+		img.banner-new-arrivals__img(src=imageUrl, alt=imageAlt)
+		figcaption.banner-new-arrivals__figcaption
+			h4.banner-new-arrivals__title= title 
+			p.banner-new-arrivals__year= year
+			.banner-new-arrivals__lable.discount-lable-circle
+				p.discount-lable-circle__persent= persent
+					span.discount-lable-circle__text= lableText
+
+//- banner-men-shoes
+mixin banner-men-shoes(imageUrl, imageAlt, title, titleSpan)
+	figure.banner-men-shoes
+		img.banner-men-shoes__img(src=imageUrl, alt=imageAlt)
+		figcaption.banner-men-shoes__figcaption
+			h3.banner-men-shoes__title= title 
+				span.banner-men-shoes__span= titleSpan
+
+//- banner-super-discount
+mixin banner-super-discount(imageUrl, imageAlt, title, titleSpan1, titleSpan2, persent)
+	figure.banner-super-discount
+		img.banner-super-discount__img(src=imageUrl, alt=imageAlt)
+		figcaption.banner-super-discount__figcaption
+			h3.banner-super-discount__title= title
+				span.banner-super-discount__title-span= titleSpan1  
+				span.banner-super-discount__title-span= titleSpan2 
+			p.banner-super-discount__percent= percent 
+			p.banner-super-discount__text 
+				|There are many variations of passages of Lorem Ipsum available, but the majority 
+				|have suffered alteration in some form
+
