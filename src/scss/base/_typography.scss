@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+
+/* fonts */
+// main font
+$main-font: 'Roboto', sans-serif;
+$main-font-weight: 400;
+$main-font-size: 13px;
+$main-font-line-height: 18px;
+$main-font-letter-spacing: 1px;
+
+// title font
+$title-font:'Old Standard TT', serif;
+$title-font-weight: 400;
+$title-font-size: 40px;
+$title-font-line-height: 50px;
+$title-font-letter-spacing: 1px;
+
+// subtitlefont
+$subtitle-font:'Roboto', sans-serif;
+$subtitle-font-weight: 400;
+$subtitle-font-size: 15px;
+$subtitle-font-line-height: 25px;
+$subtitle-font-letter-spacing: 1px;
+
+// look Book banner font
+$lookBook-font:'Old Standard TT', serif;
+$lookBook-font-weight: 400;
+$lookBook-font-size: 70px;
+$lookBook-font-line-height: 80px;
+$lookBook-font-letter-spacing: 1px;
+
+// Sales banner font
+$salesBanner-title-font:'Roboto', sans-serif;;
+$salesBanner-title-font-weight: 500;
+$salesBanner-title-font-size: 1.25rem;
+$salesBanner-title-font-line-height: 1.75rem;
+$salesBanner-title-font-letter-spacing: 0.06rem;
+
+// Sales banner persent font
+$salesBanner-persent-font:'Roboto', sans-serif;;
+$salesBanner-persent-font-weight: 300;
+$salesBanner-persent-font-size: 69px;
+$salesBanner-persent-font-line-height: 75px;
+$salesBanner-persent-font-letter-spacing: 1px;
+
+
+body{
+    color: $main-text-color;
+    @include font-type($main-font, $main-font-size, $main-font-line-height, $main-font-letter-spacing, $main-font-weight);
+}
+
+a{
+    color: $main-links-color;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+        color: $text-link-hover-color;
+    }
+}
+
+.section-title{
+    margin-top: 12vh;
+    margin-bottom: 8vh;
+    &__title{
+        @include font-type($title-font, $title-font-size, $title-font-line-height, $title-font-letter-spacing, $title-font-weight);
+        text-transform: uppercase;
+    }
+    &__subtitle{
+        @include font-type($subtitle-font, $subtitle-font-size, $subtitle-font-line-height, $subtitle-font-letter-spacing, $subtitle-font-weight);
+        text-transform: uppercase;
+    }
+}
+

@@ -1,0 +1,44 @@
+.gallery-products__img, .gallery-sales__img{
+    width:100%;
+}
+
+.gallery-products, .gallery-sales {
+    &__item{
+        margin-bottom: 30px;
+    }
+    &__img{
+        position: relative;
+        z-index: 1;
+    }
+    &__figcaption{
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        padding: 8% 10% 10% 10%;
+    }
+    &__title{
+        text-transform: uppercase;
+        color: $gray-dark-color;
+        line-height: 20px;
+    }
+    &__price, &__discount{
+        color: $gray-light-color;
+        margin-top: 10px;
+    }
+    &__discount{
+        text-decoration: line-through;
+    }
+}
+.gallery-sales{
+    &__lable{
+        margin-top: 10px;
+    }
+}
+.gallery-products{
+    &__more-btn{
+        margin-top: 20px;
+    }
+}
+
+
+

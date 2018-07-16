@@ -1,0 +1,45 @@
+.btn{
+    &--bordered{
+        border:1px solid $button-border-color;
+        padding: 10px;
+        text-transform: uppercase;
+        width:auto;
+        transition:0.3s ease-in;
+        text-align: center;
+        
+        &:hover{
+            background-color: $text-link-hover-color;
+            color:$btn-hover-text-color;
+            border-color: $btn-hover-text-color;
+        }
+    }
+    &--bordered-header{
+        @extend .btn--bordered;
+        padding: 6px 15px;
+    }
+    &--bordered-fullwidth{
+        @extend .btn--bordered;
+        display: block;
+        width:100%;
+    }
+    &--filled{
+        background-color: $button-fill-color;
+        color: #fff;
+        padding: 6px 15px;
+        text-transform: uppercase;
+        width:auto;
+        transition:0.3s ease-in;
+        
+        &:hover{
+            background-color: $text-link-hover-color;
+            color:$btn-hover-text-color;
+            border-color: $btn-hover-text-color;
+        }
+    }
+}
+
+
+
+
+
+

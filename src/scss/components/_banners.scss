@@ -1,0 +1,79 @@
+.sales-banner__img, .banner-sunglasses__img, .banner-summer-collection__img, .banner-new-arrivals__img, .banner-men-shoes__img, .banner-super-discount__img{
+    width:100%;
+}
+.look-book-banner{
+    background-color: $main-background-color;
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    margin-top: 15vh;
+    &__img-wrap{
+        flex:6;
+        display: flex;
+        justify-content: center;
+    }
+    &__figure{
+        width: 80%;
+        height: auto;
+    }
+    &__img{
+        width: 100%;
+    }
+    &__caption-wrap{
+        flex:6;
+        display: flex;
+        justify-content: center;
+    }
+    &__caption{
+        display: flex;
+        flex-direction: column;
+    }
+    &__top-text{
+        @include font-type($main-font, 20px, 24px, $main-font-letter-spacing, 300);
+        text-transform: uppercase;
+        align-self: flex-start;
+    }
+    &__title{
+        @include font-type($lookBook-font, $lookBook-font-size, $lookBook-font-line-height, $lookBook-font-letter-spacing, $lookBook-font-weight);
+        text-transform: uppercase;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    &__bottom-text{
+        @extend .look-book-banner__top-text;
+        text-transform: lowercase;
+        align-self: flex-end;
+    }
+}
+
+.sales-banner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img{
+        
+    }
+    &__figcaption{
+        position: absolute;
+        padding: 0 20%;
+    }
+    &__frame-block{
+        padding: 20px;
+        border: 2px solid $sales-banner-caption-color;
+        color: $sales-banner-caption-color;
+    }
+    &__year{
+
+    }
+    &__persent{}
+    &__persent-text{}
+    &__title{
+        @include font-type($salesBanner-title-font, $salesBanner-title-font-size, $salesBanner-title-font-line-height, $salesBanner-title-font-letter-spacing, $salesBanner-title-font-weight); 
+    }
+    &__title-span{}
+    &__arrow{}
+    &__bottom-text{}
+}
+

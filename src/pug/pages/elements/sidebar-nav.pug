@@ -1,0 +1,16 @@
+nav.sidebar__nav
+    a( class='sidebar__logo icon logo-big', id='...', href='index.html', rel='nofollow' )
+    ul.sidebar__dots-list
+        li.sidebar__dots-item: span.sidebar__dot
+        li.sidebar__dots-item: span.sidebar__dot
+        li.sidebar__dots-item: span.sidebar__dot
+        li.sidebar__dots-item: span.sidebar__dot
+    
+    +sidebar__nav-list([
+        { 'title':'Products', 'link':'products.htm' },
+        { 'title':'Abous us', 'link':'about.htm'},
+        { 'title':'Blog', 'link':'blog.htm' },
+        { 'title': 'Contact', 'link':'contact.html' },
+        { 'title':'My account', 'link':'my_account.htm' },
+        { 'title':'Log out', 'link':'log_out.htm' }
+    ])

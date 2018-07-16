@@ -1,0 +1,28 @@
+https://sass-guidelin.es/#architecture
+
+
+https://ru.bem.info/methodology/quick-start/#%D0%92%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C-1
+
+http://nicothin.github.io/idiomatic-pre-CSS/
+https://habr.com/post/203440/
+http://deothemes.com/envato/namira/namira_html/?
+file:///D:/ira/1IT/Envato/templates/elements-namira-unique-ecommerce-html-template-ZYPX3T-2017-10-25/HTML(1.0)/blog-single.html
+
+אשעוû
+
+fonts:
+
+filter menu -- Roboto regular 13 /18 - u
+sidebar meu -- Roboto medium 11/18 - u
+dropdow nmenu h -- roboto regular 13 not u 515151 / 878787
+
+
+
+slider:
+1)roboto regular 13/18 - u
+2)same - not u
+3)add - same -u
+
+items
+name - roboto regular 13/18 - u
+price - same not u

@@ -1,0 +1,13 @@
+.lable-discount{
+    &--rectangle{
+        padding: 6px 10px;
+        background-color: $lable-rectangle-color;
+        width: auto;
+        color: $lable-rectangle-text-color;
+        border-radius: 10px;
+        
+    }
+    &--circle{
+
+    }
+}
