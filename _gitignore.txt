@@ -1,7 +1,0 @@
-
-test.js
-sass_bem_etc.txt
-/node_modules
-/dist
-/.idea
-/.vscode
