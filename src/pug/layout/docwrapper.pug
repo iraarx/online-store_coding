@@ -18,23 +18,24 @@ html( lang="en" )
 				
 		block stylesheets
 			link( href='css/styles.css', rel='stylesheet', type='text/css' )
+			link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
 	
 	body
 		.container-fluid
-			.row.justify-content-center
+			.row
 				// Sidebar menu
-				.col-lg-2.col-sm-6
+				.col-lg-2.col-xl-1.col-sm-6
 					aside.sidebar
 						include ../pages/elements/sidebar-nav.pug
 				//Shopping-bag
-				.col-lg-1.col-sm-6.order-last
+				.col-lg-1.col-xl-1.col-sm-6.order-last
 					aside.cart
 						// Bag button
 						a(class='cart__link', id='cart', href='#', rel='nofollow' )
 							i.icon.shopping-bag.cart__icon
 								span.cart__number 2	
 				// Header and main wrapper
-				.col-lg-9.col-sm-12
+				.col-lg-9.col-xl-10.col-sm-12.no-gutters
 					.header-main__wrapper
 						// Header
 						header.header

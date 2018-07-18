@@ -69,7 +69,8 @@ mixin look-book-banner(imageUrl, imageAlt, topText, title, bottomText)
 //- sales__banner
 mixin gallery-sales__banner(imageUrl, imageAlt, year, persent, title, tiitleSpan, bottomText)
 	figure.sales-banner
-		img.sales-banner__img(src=imageUrl, imageAlt,)
+		.sales-banner__img-wrap
+			img.sales-banner__img(src=imageUrl, imageAlt,)
 		figcaption.sales-banner__figcaption
 			.sales-banner__frame-block
 				small.sales-banner__year= year 
@@ -78,7 +79,7 @@ mixin gallery-sales__banner(imageUrl, imageAlt, year, persent, title, tiitleSpan
 				h3.sales-banner__title= title 
 					span.sales-banner__title-span= tiitleSpan 
 				a.sales-banner__arrow(href='link.html', target='_blank', rel='nofollow')
-					i.icon.up-arrow
+					i.fas.fa-arrow-right
 			p.sales-banner__bottom-text *Terms and condition applied
 
 //-Sales gallery items
@@ -89,8 +90,8 @@ mixin gallery-sales__item(imageUrl, imageAlt, title, price, discount, discountRa
 			p.gallery-sales__title= title
 			p.gallery-sales__price= price
 				span.gallery-sales__discount= discount
-			.gallery-sales__lable.discount-lable-rectangle
-				p= discountRate
+			.gallery-sales__lable
+				span.lable-discount--rectangle= discountRate
 
 //- Section title mixin
 mixin section-title(title)
@@ -131,7 +132,7 @@ mixin banner-new-arrivals(imageUrl, imageAlt, title, year, persent, lableText)
 		figcaption.banner-new-arrivals__figcaption
 			h4.banner-new-arrivals__title= title 
 			p.banner-new-arrivals__year= year
-			.banner-new-arrivals__lable.discount-lable-circle
+			.banner-new-arrivals__lable.lable-discount--circle
 				p.discount-lable-circle__persent= persent
 					span.discount-lable-circle__text= lableText
 

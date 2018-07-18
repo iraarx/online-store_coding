@@ -1,0 +1,18 @@
+//- Main slider item mixin
+mixin main-slider__item(imageUrl, imageAlt, logoUrl, logoAlt, productName, brandLink, brandName, itemPrice, itemDiscount, addUrl)
+	.main-slider__item
+		.row.align-items-center
+			.col-lg-5.offset-lg-2
+				.main-slider__img-wrapper
+					img.main-slider__img(src=imageUrl, alt=imageAlt)
+			.col-lg-3.offset-lg-1.main-slider__caption
+				.main-slider__info
+					.main-slider__logo-wrapper
+						img.main-slider__logo(src=logoUrl, alt=logoAlt)
+					p.main-slider__description= productName 
+						span.main-slider__brand
+							a(href=brandLink, rel='nofollow')= brandName
+					p.main-slider__price= itemPrice 
+						span.main-slider__discount= itemDiscount
+				.main-slider__add-btn
+					a.main-slider__add-link(href=addUrl, rel='nofollow') Add to cart
