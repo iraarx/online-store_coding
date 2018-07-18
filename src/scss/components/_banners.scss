@@ -47,33 +47,3 @@
     }
 }
 
-.sales-banner{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &__img{
-        
-    }
-    &__figcaption{
-        position: absolute;
-        padding: 0 20%;
-    }
-    &__frame-block{
-        padding: 20px;
-        border: 2px solid $sales-banner-caption-color;
-        color: $sales-banner-caption-color;
-    }
-    &__year{
-
-    }
-    &__persent{}
-    &__persent-text{}
-    &__title{
-        @include font-type($salesBanner-title-font, $salesBanner-title-font-size, $salesBanner-title-font-line-height, $salesBanner-title-font-letter-spacing, $salesBanner-title-font-weight); 
-    }
-    &__title-span{}
-    &__arrow{}
-    &__bottom-text{}
-}
-

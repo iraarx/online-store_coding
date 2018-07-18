@@ -80,3 +80,70 @@ $(document).ready(function() {
       };
     
 });
+$(document).ready(function() {
+    'use strict';
+
+    // Creating header dropdown menu in header
+    $('.header-menu li').has('.header-menu__dropdown-wrap').hover(
+		function() {
+            $(this).find('.header-menu__dropdown-wrap').fadeToggle();
+            $(this).find('.header-menu__dropdown-wrap').css({display: 'flex'});
+        });	
+
+    // Add class to header button Advance filters
+    $('.header-menu__item:nth-child(7) > .header-menu__link').addClass('btn--filled');
+      
+    // // Responsive Header nav
+    // var click = $('.menu-button');
+    // var collapse = $('.wr-collapse-nav');
+    // var nav = $('.header-nav');
+            
+    // $(click).on('click', function(e) {
+    //     e.preventDefault();
+    //     collapse.slideToggle();
+    //     nav.toggleClass("header-black");
+    // });
+    
+    // $(window).resize(function(){
+    //     var wid = $(window).width();
+    //     if(wid > 760 && menu.is(':hidden')) {
+    //         collapse.removeAttr('style')
+    //     }
+    // });
+
+
+
+
+
+});
+// import './jquery.formstyler.js'
+$(document).ready(function() {
+    
+    'use strict';
+
+           
+    $('.owl-carousel').owlCarousel({
+        loop:true, //Зацикливаем слайдер
+        margin:50, //Отступ от элемента справа в 50px
+        autoplay:true, //Автозапуск слайдера
+        smartSpeed:1618, //Время движения слайда
+        autoplayTimeout:4000, //Время смены слайда
+        autoplayHoverPause:true,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        items: 1,
+        stagePadding:30,
+        singleItem:true,
+        nav:false,
+        pagination:true,
+        dotsEach:7/true,
+        touchDrag:true,
+        center:true,
+        navText:["",""]
+    });
+
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+      };
+    
+});

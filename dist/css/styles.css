@@ -9323,14 +9323,6 @@ a:hover {
   border-color: #000;
 }
 
-.lable-discount--rectangle {
-  padding: 6px 10px;
-  background-color: #2d2d2d;
-  width: auto;
-  color: #fff;
-  border-radius: 10px;
-}
-
 .main-slider__wrapper {
   background-color: #e7e7e7;
 }
@@ -9486,10 +9478,6 @@ a:hover {
   text-decoration: line-through;
 }
 
-.gallery-sales__lable {
-  margin-top: 10px;
-}
-
 .gallery-products__more-btn {
   margin-top: 20px;
 }
@@ -9585,38 +9573,6 @@ a:hover {
   text-transform: lowercase;
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-.sales-banner {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.sales-banner__figcaption {
-  position: absolute;
-  padding: 0 20%;
-}
-
-.sales-banner__frame-block {
-  padding: 20px;
-  border: 2px solid #ffb61b;
-  color: #ffb61b;
-}
-
-.sales-banner__title {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  letter-spacing: 0.06rem;
-  font-weight: 500;
 }
 
 .icon {
