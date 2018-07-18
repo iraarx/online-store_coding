@@ -33,11 +33,9 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
     pug = require('gulp-pug'),
-    merge = require('merge-stream'),
-    buffer = require('vinyl-buffer');
+    preservetime = require('gulp-preservetime');
     
-
-
+    
 
 
 
@@ -109,6 +107,7 @@ gulp.task('sass', function() {
         .pipe(browser.stream());
 });
 
+
 // Concatenate and minify JS.
 gulp.task('js', ['lint-js'], function() {
     return gulp
@@ -146,6 +145,14 @@ gulp.task('lint-js', function() {
         .pipe(jshint.reporter('fail')); // task fails on JSHint error
 });
 
+// Font awesome
+gulp.task('preservetime', function(){
+    return gulp
+        .src('src/fonts/*.{ttf,woff,woff2,eof,svg}')
+        .pipe(gulp.dest('dist/fonts'))
+        .pipe(preservetime());
+});
+
 // Compresses images.
 gulp.task('img',  function() {
     return gulp
@@ -172,6 +179,7 @@ gulp.task('sprites-svg', function() {
         }))
         .pipe(gulp.dest('src'));
 });
+
 
 
 // Deletes the dist folder so the build can start fresh.
