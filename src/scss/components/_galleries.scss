@@ -1,20 +1,30 @@
 .gallery-products__img, .gallery-sales__img{
     width:100%;
+    height: auto;
 }
 
 .gallery-products, .gallery-sales {
     &__item{
+        
         margin-bottom: 30px;
+        &:hover{
+            .hover-product{
+                opacity:1;
+            }
+        }    
     }
-    &__img{
+    &__figure{
         position: relative;
         z-index: 1;
-    }
+        min-height:325px;
+        background-color:$gallery-item-background-color;
+    }    
+    
     &__figcaption{
         position: absolute;
         bottom: 0;
         z-index: 2;
-        padding: 8% 10% 10% 10%;
+        padding: 8%;
     }
     &__title{
         text-transform: uppercase;
@@ -28,7 +38,21 @@
     &__discount{
         text-decoration: line-through;
     }
+    &__hover{
+        height:100%;
+        width: 100%;
+        position: absolute;
+        top:0px;
+        left:0px;
+        z-index:3;
+    }
+    
 }
 .gallery-products__more-btn{
     margin-top: 20px;
+}
+.gallery-sales{
+    &__lable{
+        margin-top: 10%;
+    }
 }

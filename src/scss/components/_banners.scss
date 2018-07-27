@@ -1,12 +1,39 @@
-.sales-banner__img, .banner-sunglasses__img, .banner-summer-collection__img, .banner-new-arrivals__img, .banner-men-shoes__img, .banner-super-discount__img{
-    width:100%;
+.banner{
+    &--hovered, &--unhovered{
+        img{
+            width:100%;
+            height: 100%; 
+        }
+        cursor: pointer;
+    }
+    &--hovered{
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &:after{
+            content: '';
+            background: $banner-hover-color;
+            position: absolute;
+            width:100%;
+            height:100%;
+            z-index: 3;
+            opacity: 0;
+            transition: all 0.6s ease-in;
+        } 
+        &:hover:after{
+            opacity: 1;
+        }
+    }
 }
+// look Book banner
 .look-book-banner{
+    position: relative;
     background-color: $main-background-color;
     display: flex;
     height: 50vh;
     align-items: center;
     margin-top: 15vh;
+    
     &__img-wrap{
         flex:6;
         display: flex;
@@ -29,12 +56,20 @@
         flex-direction: column;
     }
     &__top-text{
-        @include font-type($main-font, 20px, 24px, $main-font-letter-spacing, 300);
+        @include font-type($main-font,
+                            $lookBook-small-text-font-size,
+                            $lookBook-small-text-font-line-height,
+                            $main-font-letter-spacing,
+                            $lookBook-small-text-font-weight);
         text-transform: uppercase;
         align-self: flex-start;
     }
     &__title{
-        @include font-type($lookBook-font, $lookBook-font-size, $lookBook-font-line-height, $lookBook-font-letter-spacing, $lookBook-font-weight);
+        @include font-type($lookBook-font,
+                            $lookBook-font-size,
+                            $lookBook-font-line-height,
+                            $lookBook-font-letter-spacing,
+                            $lookBook-font-weight);
         text-transform: uppercase;
         width: auto;
         display: flex;
@@ -47,3 +82,374 @@
     }
 }
 
+// Sales banner
+.sales-banner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 680px;
+    background-color: $sales-banner-background-color;
+    
+    &:hover{
+        .sales-banner__frame-block{
+            transition: all 0.3s ease-in-out;
+            outline: 4px solid $sales-banner-caption-color;
+            outline-offset: 4px;
+        }
+        .sales-banner__arrow{
+            transform: translateX(5px); 
+            color:$sales-banner-caption-color;
+        }
+    }
+    
+    &__img{
+        position: absolute;
+        top:0px;
+        left:0px;
+        height: auto;
+        width: 100%;
+    }
+    
+    &__figcaption{
+        position: absolute;
+    }
+    &__figcaption-block-wrap{
+        padding: 0 18%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__frame-block{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        border: 2px solid $sales-banner-caption-color;
+        color: $sales-banner-caption-color;
+    }
+    &__year{
+        @include font-type($salesBanner-persent-font,
+                            $salesBanner-year-text-font-size,
+                            $salesBanner-year-text-font-line-height,
+                            $salesBanner-persent-font-letter-spacing,
+                            $salesBanner-persent-font-weight); 
+    }
+    &__persent{
+        padding:15% 0;
+        text-align: center;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        @include font-type($salesBanner-persent-font,
+                            $salesBanner-persent-font-size,
+                            $salesBanner-persent-font-line-height,
+                            $salesBanner-persent-font-letter-spacing,
+                            $salesBanner-persent-font-weight); 
+    }
+    &__persent-text{
+        @include font-type($salesBanner-persent-font,
+                            $salesBanner-persent-text-font-size,
+                            $salesBanner-persent-text-font-line-height,
+                            $salesBanner-persent-font-letter-spacing,
+                            $salesBanner-persent-font-weight); 
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        @include font-type($salesBanner-title-font,
+                            $salesBanner-title-font-size,
+                            $salesBanner-title-font-line-height,
+                            $salesBanner-title-font-letter-spacing,
+                            $salesBanner-title-font-weight);
+        text-transform: uppercase;
+    }
+    &__title-span{
+        @include font-type($salesBanner-title-font, 
+                            $salesBanner-title-font-size, 
+                            $salesBanner-title-font-line-height,
+                            $salesBanner-title-font-letter-spacing, 
+                            $salesBanner-title-span-font-weight);
+    }
+    &__arrow {
+        font-size: 22px;
+        color:$sales-banner-caption-color;
+        margin-top: 22px;
+        transition: all 0.6s ease-in;
+        // &:hover{
+        //     transform: translateX(10px); 
+        //     color:$sales-banner-caption-color;
+        // }
+    }
+    &__bottom-text{
+        position: absolute;
+        bottom: 3%;
+        right: 10%;
+        color:$sales-banner-bottom-text-color;
+        @include font-type($salesBanner-persent-font,
+                            $salesBanner-bottom-text-font-size,
+                            $salesBanner-bottom-text-font-line-height,
+                            $salesBanner-persent-font-letter-spacing,
+                            $salesBanner-bottom-text-font-weight);
+        font-style: italic;
+    }
+}
+
+.banner-summer-collection{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &__figcaption{
+        position: absolute;
+        background: $summerCollection-background-color;
+        padding: 8% 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include font-type($summerCollection-title-font,
+                            $summerCollection-title-font-size,
+                            $summerCollection-title-font-line-height,
+                            $summerCollection-title-font-letter-spacing,
+                            $summerCollection-title-font-weight);
+        text-transform: uppercase;
+        color:$summerCollection-title-gray-color;
+    }
+    &__title-span{
+        color: $summerCollection-title-orange-color;
+    }
+    &__year{
+        color: $summerCollection-year-color;
+        @include font-type($summerCollection-title-font,
+                            $summerCollection-year-font-size,
+                            $summerCollection-year-font-line-height,
+                            $summerCollection-year-font-letter-spacing,
+                            $summerCollection-year-font-weight);
+    }
+    &__product-code{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        width: 100%;
+        color:$summerCollection-code-color;
+        padding: 8px;
+        border: solid 1px $summerCollection-code-color;
+        border-radius: 20px;
+        text-transform: uppercase;
+        margin-top: 20%;
+    }
+    
+    &__code-number{
+        margin-left: 5%;
+    }
+}
+
+.banner-new-arrivals{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    &__figcaption{
+        position: absolute;
+        margin-top: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        @include font-type( $newArrivals-title-font, 
+                            $newArrivals-title-font-size,
+                            $newArrivals-title-font-line-height,
+                            $newArrivals-title-font-letter-spacing,
+                            $newArrivals-title-font-weight);
+        text-transform: uppercase;
+    }
+    &__title-span{
+        color: $newArrivals-title-span-color;
+    }
+    &__year{
+         @include font-type($newArrivals-title-font, 
+                            $newArrivals-year-font-size, 
+                            $newArrivals-year-font-line-height, 
+                            $newArrivals-year-font-letter-spacing, 
+                            $newArrivals-year-font-weight);
+    }
+    &__lable{
+        position: absolute;
+        bottom:15%;
+        right:10%;
+    }
+}
+
+.banner-sunglasses{
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    
+    &__figcaption{
+        position: absolute;
+        top:20%;
+        right:5%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        //align-items: flex-end;
+        text-align: center;
+    }
+    &__title{
+        text-transform: uppercase;
+        @include font-type($sunglasses-title-font, 
+                            $sunglasses-title-font-size,
+                            $sunglasses-title-font-line-height,
+                            $sunglasses-title-font-letter-spacing,
+                            $sunglasses-title-font-weight);
+    }
+    &__under-price-text{
+        text-transform: uppercase;
+        @include font-type($sunglasses-underPrice-font, 
+                            $sunglasses-underPrice-font-size,
+                            $sunglasses-underPrice-font-line-height,
+                            $sunglasses-underPrice-font-letter-spacing,
+                            $sunglasses-underPrice-font-weight);
+        color:$sunglasses-under-price-text-color;
+    }
+    &__under-price-number{
+        color:$sunglasses-under-price-number-color;
+        padding-left: 10px;
+    }
+    &__exclamation-mark{
+        color:$sunglasses-under-price-text-color;
+    }
+    &__collection{
+        padding:2% 0 2% 0;
+        @include font-type($sunglasses-collection-font, 
+                            $sunglasses-collection-font-size,
+                            $sunglasses-collection-font-line-height,
+                            $sunglasses-collection-font-letter-spacing,
+                            $sunglasses-collection-font-weight);
+    }
+    &__bottom-text{
+        @include font-type($sunglasses-title-font, 
+                            $sunglasses-bottom-text-font-size,
+                            $sunglasses-bottom-text-font-line-height,
+                            $sunglasses-bottom-text-letter-spacing,
+                            $sunglasses-title-font-weight);
+    }
+}
+
+.banner-men-shoes{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    
+    &__figcaption{
+        position: absolute;
+        top:15%;
+        left:40%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: left;
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        color:$menShoes-title-color;
+        background-color:transparent;
+        @include font-type($menShoes-title-font, 
+                            $menShoes-title-font-size,
+                            $menShoes-title-font-line-height,
+                            $menShoes-title-font-letter-spacing,
+                            $menShoes-title-font-weight);
+        background-color:$menShoes-title-color;
+        color: transparent;
+        text-shadow: 2px 2px 3px rgba(149,138,132,0.5);
+        -webkit-background-clip: text;
+            -moz-background-clip: text;
+                background-clip: text;
+        
+    }
+    &__title-span{
+        color:$menShoes-title-span-color;
+        text-shadow:none;
+        @include font-type($menShoes-title-font, 
+                            $menShoes-titleSpan-font-size,
+                            $menShoes-titleSpan-font-line-height,
+                            $menShoes-titleSpan-font-letter-spacing,
+                            $menShoes-titleSpan-font-weight);
+    }
+}
+
+.banner-super-discount{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    
+    &__img{
+        height: auto;
+        width: 100%;
+    }
+    &__figcaption{
+        position: absolute;
+        top:0px;
+        left:0px;
+        padding:7%;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    &__title-wrap{
+        display: flex;
+    }
+    &__title{
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        color:$superDiscount-text-color;
+        @include font-type($superDiscount-title-font, 
+                            $superDiscount-title-font-size,
+                            $superDiscount-title-font-line-height,
+                            $superDiscount-title-font-letter-spacing,
+                            $superDiscount-title-font-weight);
+    }
+    &__title-span-first{
+        font-weight: $superDiscount-spanFirst-font-weight;                            
+    }
+    &__title-span-second{
+        font-size: $superDiscount-spanSecond-font-size;
+        line-height: $superDiscount-spanSecond-font-line-height;                            
+    }
+    &__percent{
+        color:$superDiscount-percent-color;
+        @include font-type($superDiscount-title-font, 
+                            $superDiscount-percent-font-size,
+                            $superDiscount-percent-font-line-height,
+                            $superDiscount-title-font-letter-spacing,
+                            $superDiscount-title-font-weight);
+    }
+    &__text{
+        margin-top: 4%;
+        color:$superDiscount-text-color;
+        @include font-type($superDiscount-title-font, 
+                            $superDiscount-text-font-size,
+                            $superDiscount-text-font-line-height,
+                            $superDiscount-text-font-letter-spacing,
+                            $superDiscount-text-font-weight);
+    }
+    
+}

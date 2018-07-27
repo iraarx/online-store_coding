@@ -1,3 +1,12 @@
+// Owl Carousel
 @import '../../node_modules/owl.carousel/src/scss/owl.carousel.scss';
+// Bootstrap
 @import '../../node_modules/bootstrap-4-grid/scss/grid.scss';
+
+// Font Awesome
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fa-brands.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fa-regular.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fa-solid.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss';
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+$fa-font-path:"../../node_modules/@fortawesome/fontawesome-free/webfonts";

@@ -1,16 +1,64 @@
 $(document).ready(function() {
     'use strict';
 
-    // Creating header dropdown menu in header
+    //Creating header dropdown menu in header
     $('.header-menu li').has('.header-menu__dropdown-wrap').hover(
-		function() {
+        function() {
             $(this).find('.header-menu__dropdown-wrap').fadeToggle();
-            $(this).find('.header-menu__dropdown-wrap').css({display: 'flex'});
+            $(this).find('.header-menu__dropdown-wrap').toggleClass('visible');
         });	
+    // $(window).resize(function(){
+    //     var wid = $(window).width();
+    //     if(wid <=766) {
+    //         $('.header-menu li').has('.header-menu__dropdown-wrap').hover(
+    //             function() {
+    //                 $(this).find('.header-menu__dropdown-wrap').stop().fadeToggle();;
+    //                 $(this).find('.header-menu__dropdown-wrap').removeClass('visible');
+    //             });	
+    //         }
+    // });
 
-    // Add class to header button Advance filters
-    $('.header-menu__item:nth-child(7) > .header-menu__link').addClass('btn--filled');
-      
+    $(window).resize(function(){
+        var wid = $(window).width();
+        
+        if(wid <= 1020) {
+            $('.header-menu__banner').toggleClass('hidden');
+        }
+        
+    });
+    
+    // dropdown menu in sidebar
+    $(function() {
+        $('.sidebar__menu-icon').on('click', function(event){
+            event.preventDefault();
+            $(this).toggleClass('active');
+            $('.sidebar__menu-colapse').slideToggle(500, "easeOutBack");
+            
+        });
+    });
+     $(function() {
+        $('.header__icon-filter').on('click', function(event){
+            event.preventDefault();
+            //$('.sidebar__menu-colapse').toggleClass('visible');
+            
+            $(this).toggleClass('active');
+            $('.header__nav').slideToggle(500, "easeOutBack");
+            
+        });
+    });
+
+        
+    // top skrolling-page
+
+    $(".footer").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+    
+
+
     // // Responsive Header nav
     // var click = $('.menu-button');
     // var collapse = $('.wr-collapse-nav');

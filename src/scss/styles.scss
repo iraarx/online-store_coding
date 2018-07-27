@@ -21,6 +21,8 @@
 @import 'layout/forms';
 
 @import 'components/buttons';
+@import 'components/hover';
+@import 'components/lables';
 @import 'components/slider';
 @import 'components/galleries';
 @import 'components/banners';
@@ -31,6 +33,8 @@
 
 @import 'pages/home';
 @import 'pages/single-product';
+
+@import 'layout/responsive';
 
 // @import 'themes/theme';
 // @import 'themes/admin';

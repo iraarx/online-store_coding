@@ -18,34 +18,40 @@ html( lang="en" )
 				
 		block stylesheets
 			link( href='css/styles.css', rel='stylesheet', type='text/css' )
-			link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
+			//- link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
 	
 	body
 		.container-fluid
 			.row
 				// Sidebar menu
-				.col-lg-2.col-xl-1.col-sm-6
+				.col-lg-2.col-xl-2.col-md-12.col-sm-12
 					aside.sidebar
 						include ../pages/elements/sidebar-nav.pug
-				//Shopping-bag
-				.col-lg-1.col-xl-1.col-sm-6.order-last
-					aside.cart
-						// Bag button
-						a(class='cart__link', id='cart', href='#', rel='nofollow' )
-							i.icon.shopping-bag.cart__icon
-								span.cart__number 2	
 				// Header and main wrapper
-				.col-lg-9.col-xl-10.col-sm-12.no-gutters
-					.header-main__wrapper
-						// Header
-						header.header
-							include ../pages/elements/header-nav.pug
-						// Main 
-						main.main-content
-							//- Content here
-							block content
-						// Footer
-						include ../pages/elements/footer.pug
+				.col-lg-10.col-xl-10.col-md-12.col-sm-12
+						.row
+							.col-lg-11.col-md-12.col-sm-6.col-xs-6
+								// Header
+								header.header#header
+									include ../pages/elements/header-nav.pug
+							//Shopping-bag
+							.col-lg-1.col-md-12.col-sm-6.col-xs-6
+								aside.cart
+									// Bag button
+									a(class='cart__link', id='cart', href='#', rel='nofollow' )
+										i.icon.shopping-bag.cart__icon
+											span.cart__number 2	
+						.row
+							.col-lg-11.col-md-12
+								// Main 
+								main.main-content
+									//- Content here
+									block content
+			.row.bg--gray
+				.col-lg-9.offset-lg-2.offset-md-0.col-md-12
+					// Footer
+					include ../pages/elements/footer.pug
+
 
 		script(src='js/scripts.min.js') 
 			

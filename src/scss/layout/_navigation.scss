@@ -6,9 +6,12 @@
     padding: 30px 0;
     
 }
-
+.header__wrap-filters-search{
+    display: flex;
+}
 .header-menu{
     display: flex;
+            
     &__item{
         padding: 20px 20px 20px 0px;
         // display: flex;
@@ -52,6 +55,7 @@
         box-shadow:7px 48px 97px 31px rgba(231,231,231,0.92);
         transition: all 200ms ease;
         z-index: 10;
+        flex-wrap: wrap;
         }
 
     &__banner{
@@ -77,8 +81,18 @@
 }
 
 .header{
+    
+    &__colapse-menu{
+        display: flex;
+        
+    }
+    &__icon-filter{
+        display: none;
+    }
     &__advanced-filters{
+        display: inline-block;
         margin-left: 10px;
+        height:auto;
     }
     &__search-form {
         margin-left: 10px;
@@ -109,9 +123,9 @@
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    &__link{
-        
-    }
+    align-items: baseline;
+    padding:10px;
+    z-index: 20;
     &__icon{
         position: relative;
         display: flex;

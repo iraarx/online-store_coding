@@ -54,6 +54,15 @@ mixin gallery-products__item(imageUrl, imageAlt, title, price, discount)
 			p.gallery-products__title= title
 			p.gallery-products__price= price
 				span.gallery-products__discount= discount
+		.gallery-products__hover.hover-product
+			+hover-product
+
+//- Hover product panel
+mixin hover-product()
+	.hover-product__frame
+		a(class='hover-product__text-link', id='cart', href='#', rel='nofollow' ) View
+		a(class='hover-product__icon-link', id='cart', href='#', rel='nofollow' )
+			i.icon.shopping-bag.hover-product__icon
 
 //- Look-book-banner
 mixin look-book-banner(imageUrl, imageAlt, topText, title, bottomText)
@@ -65,22 +74,24 @@ mixin look-book-banner(imageUrl, imageAlt, topText, title, bottomText)
 			span.look-book-banner__top-text= topText
 			h2.look-book-banner__title= title 
 			span.look-book-banner__bottom-text= bottomText
+	
 
 //- sales__banner
 mixin gallery-sales__banner(imageUrl, imageAlt, year, persent, title, tiitleSpan, bottomText)
-	figure.sales-banner
+	figure.sales-banner.banner--unhovered
 		.sales-banner__img-wrap
 			img.sales-banner__img(src=imageUrl, imageAlt,)
 		figcaption.sales-banner__figcaption
-			.sales-banner__frame-block
-				small.sales-banner__year= year 
-				p.sales-banner__persent= persent 
-					span.sales-banner__persent-text off on
-				h3.sales-banner__title= title 
-					span.sales-banner__title-span= tiitleSpan 
-				a.sales-banner__arrow(href='link.html', target='_blank', rel='nofollow')
-					i.fas.fa-arrow-right
-			p.sales-banner__bottom-text *Terms and condition applied
+			.sales-banner__figcaption-block-wrap
+				.sales-banner__frame-block
+					small.sales-banner__year= year 
+					p.sales-banner__persent= persent 
+						span.sales-banner__persent-text off on
+					h3.sales-banner__title= title 
+						span.sales-banner__title-span= tiitleSpan 
+					a.sales-banner__arrow(href='link.html', target='_blank', rel='nofollow')
+						i.fas.fa-arrow-right
+		p.sales-banner__bottom-text *Terms and condition applied
 
 //-Sales gallery items
 mixin gallery-sales__item(imageUrl, imageAlt, title, price, discount, discountRate)
@@ -92,6 +103,8 @@ mixin gallery-sales__item(imageUrl, imageAlt, title, price, discount, discountRa
 				span.gallery-sales__discount= discount
 			.gallery-sales__lable
 				span.lable-discount--rectangle= discountRate
+		.gallery-sales__hover.hover-product
+			+hover-product
 
 //- Section title mixin
 mixin section-title(title)
@@ -102,58 +115,69 @@ mixin section-title(title)
 //- Banners
 
 //- banner-sunglasses
-mixin banner-sunglasses(imageUrl, imageAlt, title, underPrice, collection)
-	figure.banner-sunglasses
+mixin banner-sunglasses(imageUrl, imageAlt, title, underPriceText, underPriceNumber, collection)
+	figure.banner-sunglasses.banner--hovered
 		img.banner-sunglasses__img(src=imageUrl, alt=imageAlt)
 		figcaption.banner-sunglasses__figcaption
 			h3.banner-sunglasses__title= title
-			p.banner-sunglasses__under-price= underPrice
+			p.banner-sunglasses__under-price-text= underPriceText
+				span.banner-sunglasses__under-price-number= underPriceNumber 
+					span.banner-sunglasses__exclamation-mark !
 			h4.banner-sunglasses__collection= collection
-			p.banner-sunglasses__text 
+			p.banner-sunglasses__bottom-text 
 				|There are many variations of passages of Lorem Ipsum 
 				br
 				|available, but the majority have suffered alteration in some.
-
+		
+	
 //- banner-summer-collection
-mixin banner-summer-collection(imageUrl, imageAlt, title, year, code)
-	figure.banner-summer-collection
+mixin banner-summer-collection(imageUrl, imageAlt, title, span, year, code)
+	figure.banner-summer-collection.banner--hovered
 		img.banner-summer-collection__img(src=imageUrl, alt=imageAlt)
 		figcaption.banner-summer-collection__figcaption
-			h4.banner-summer-collection__title= title 
+			h4.banner-summer-collection__title= title
+				span.banner-summer-collection__title-span= span
 			p.banner-summer-collection__year= year
 			.banner-summer-collection__product-code
-				p.banner-summer-collection__code-text code
+				p.banner-summer-collection__code-text code   
 					span.banner-summer-collection__code-number= code
+		
 
 //- banner-new-arrivals
-mixin banner-new-arrivals(imageUrl, imageAlt, title, year, persent, lableText)
-	figure.banner-new-arrivals
+mixin banner-new-arrivals(imageUrl, imageAlt, title, titleSpan, year, persent, lableText)
+	figure.banner-new-arrivals.banner--hovered
 		img.banner-new-arrivals__img(src=imageUrl, alt=imageAlt)
 		figcaption.banner-new-arrivals__figcaption
-			h4.banner-new-arrivals__title= title 
+			h4.banner-new-arrivals__title= title
+				.banner-new-arrivals__title-span= titleSpan 
 			p.banner-new-arrivals__year= year
-			.banner-new-arrivals__lable.lable-discount--circle
-				p.discount-lable-circle__persent= persent
-					span.discount-lable-circle__text= lableText
+		.banner-new-arrivals__lable
+			p.lable-discount--circle= persent
+				span.lable-discount--circle__text= lableText
+		
 
 //- banner-men-shoes
 mixin banner-men-shoes(imageUrl, imageAlt, title, titleSpan)
-	figure.banner-men-shoes
+	figure.banner-men-shoes.banner--hovered
 		img.banner-men-shoes__img(src=imageUrl, alt=imageAlt)
 		figcaption.banner-men-shoes__figcaption
 			h3.banner-men-shoes__title= title 
-				span.banner-men-shoes__span= titleSpan
+				span.banner-men-shoes__title-span= titleSpan
+		
 
 //- banner-super-discount
-mixin banner-super-discount(imageUrl, imageAlt, title, titleSpan1, titleSpan2, persent)
-	figure.banner-super-discount
+mixin banner-super-discount(imageUrl, imageAlt, title, titleSpan1, titleSpan2, percent)
+	figure.banner-super-discount.banner--hovered
 		img.banner-super-discount__img(src=imageUrl, alt=imageAlt)
 		figcaption.banner-super-discount__figcaption
-			h3.banner-super-discount__title= title
-				span.banner-super-discount__title-span= titleSpan1  
-				span.banner-super-discount__title-span= titleSpan2 
-			p.banner-super-discount__percent= percent 
-			p.banner-super-discount__text 
+			.banner-super-discount__title-wrap
+				h3.banner-super-discount__title= title
+					span.banner-super-discount__title-span-first= titleSpan1  
+					span.banner-super-discount__title-span-second= titleSpan2 
+				p.banner-super-discount__percent= percent 
+			p.banner-super-discount__text
 				|There are many variations of passages of Lorem Ipsum available, but the majority 
+				br 
 				|have suffered alteration in some form
+		
 

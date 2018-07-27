@@ -1,0 +1,48 @@
+.hover-product{
+    opacity:0;
+    transition:all 0.6s ease-in;
+    background-color:$hover-product-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__frame{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $hover-product-color;
+        outline: 4px solid $hover-product-color;
+        outline-offset: 2px;
+        padding:20%;
+        
+    }
+    &__text-link{
+        text-transform: uppercase;
+        color:$hover-product-color;
+    }
+    &__icon-link{
+        margin-top: 10px;
+    }
+    
+}
+
+.icon.dribble {
+    &:before:hover {
+        background-color: yellow;
+            border-radius:50%;
+       
+      }
+    }
+.social-icons__item:hover{
+    .icon{
+        transition: box-shadow 0.3s ease-in;
+        display: block;
+        // fill:red;
+        // background-color: white;
+        border-radius:50%;
+        box-shadow: inset 2px 4px 26px -1px rgba(1,1,0,0.3);
+        
+    }
+}
+

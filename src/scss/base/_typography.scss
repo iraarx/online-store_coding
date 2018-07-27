@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
-@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+@import url('https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Old+Standard+TT:400,700|Open+Sans:400,600|Oswald|Roboto:100,300,400,500,700');
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Old Standard TT', serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Oswald', sans-serif;
+// font-family: 'Mrs Saint Delafield', cursive;
 
 /* fonts */
 // main font
-$main-font: 'Roboto', sans-serif;
+$main-font:'Roboto', sans-serif;
 $main-font-weight: 400;
 $main-font-size: 13px;
 $main-font-line-height: 18px;
@@ -23,12 +27,140 @@ $subtitle-font-size: 15px;
 $subtitle-font-line-height: 25px;
 $subtitle-font-letter-spacing: 1px;
 
-// look Book banner font
+/* Look Book banner */
+// look Book banner main font
 $lookBook-font:'Old Standard TT', serif;
 $lookBook-font-weight: 400;
 $lookBook-font-size: 70px;
 $lookBook-font-line-height: 80px;
 $lookBook-font-letter-spacing: 1px;
+// look Book banner small text
+$lookBook-small-text-font-size: 20px;
+$lookBook-small-text-font-line-height: 24px;
+$lookBook-small-text-font-weight: 300;
+
+/* Sales banner */
+// Sales banner title font
+$salesBanner-title-font:'Roboto', sans-serif;
+$salesBanner-title-font-weight: 500;
+$salesBanner-title-font-size: 1.25rem;
+$salesBanner-title-font-line-height: 1.75rem;
+$salesBanner-title-font-letter-spacing: 0.06rem;
+// Sales banner title-span font
+$salesBanner-title-span-font-weight: 300;
+// Sales banner persent font
+$salesBanner-persent-font:'Roboto', sans-serif;
+$salesBanner-persent-font-weight: 100;
+$salesBanner-persent-font-size: 69px;
+$salesBanner-persent-font-line-height: 73px;
+$salesBanner-persent-font-letter-spacing: 1px;
+// Sales banner persent text font
+$salesBanner-persent-text-font-size: 40px;
+$salesBanner-persent-text-font-line-height: 44px;
+// Sales banner year font
+$salesBanner-year-text-font-size: 15px;
+$salesBanner-year-text-font-line-height: 21px;
+// Sales banner bottom-text font
+$salesBanner-bottom-text-font-weight: 300px;
+$salesBanner-bottom-text-font-size: 10px;
+$salesBanner-bottom-text-font-line-height: 16px;
+
+/*banner-sunglasses*/
+$sunglasses-title-font:'Roboto', sans-serif;
+$sunglasses-title-font-weight: 400;
+$sunglasses-title-font-size: 15px;
+$sunglasses-title-font-line-height: 21px;
+$sunglasses-title-font-letter-spacing: 12px;
+
+$sunglasses-underPrice-font:'Oswald', sans-serif;
+$sunglasses-underPrice-font-weight: 400;
+$sunglasses-underPrice-font-size: 43px;
+$sunglasses-underPrice-font-line-height: 49px;
+$sunglasses-underPrice-font-letter-spacing: -2px;
+
+$sunglasses-collection-font:'Mrs Saint Delafield', cursive;
+$sunglasses-collection-font-weight: 400;
+$sunglasses-collection-font-size: 48px;
+$sunglasses-collection-font-line-height: 54px;
+$sunglasses-collection-font-letter-spacing: 1px;
+
+$sunglasses-bottom-text-font-size: 12px;
+$sunglasses-bottom-text-font-line-height: 18px;
+$sunglasses-bottom-text-letter-spacing: 1px;
+
+
+/*banner-summer-collection*/
+$summerCollection-title-font:'Open Sans', sans-serif;
+$summerCollection-title-font-weight: 400;
+$summerCollection-title-font-size: 15px;
+$summerCollection-title-font-line-height: 21px;
+$summerCollection-title-font-letter-spacing: 5px;
+
+$summerCollection-underPrice-font:'Open Sans', sans-serif;
+$summerCollection-underPrice-font-weight: 400;
+$summerCollection-underPrice-font-size: 43px;
+$summerCollection-underPrice-font-line-height: 49px;
+$summerCollection-underPrice-font-letter-spacing: 1px;
+
+$summerCollection-year-font-weight: 300;
+$summerCollection-year-font-size: 52px;
+$summerCollection-year-font-line-height: 58px;
+$summerCollection-year-font-letter-spacing: 1px;
+
+/*banner-new-arrivals*/
+$newArrivals-title-font:'Open Sans', sans-serif;
+$newArrivals-title-font-weight: 600;
+$newArrivals-title-font-size: 22px;
+$newArrivals-title-font-line-height: 26px;
+$newArrivals-title-font-letter-spacing: 1px;
+
+$newArrivals-year-font-weight: 400;
+$newArrivals-year-font-size: 15px;
+$newArrivals-year-font-line-height: 18px;
+$newArrivals-year-font-letter-spacing: 3px;
+
+/*menShoes*/
+$menShoes-title-font:'Roboto', sans-serif;
+$menShoes-title-font-weight: 500;
+$menShoes-title-font-size: 80px;//122
+$menShoes-title-font-line-height: 60px;//128
+$menShoes-title-font-letter-spacing: 1px;
+
+$menShoes-titleSpan-font-weight: 300;
+$menShoes-titleSpan-font-size: 16px;//
+$menShoes-titleSpan-font-line-height: 35px;
+$menShoes-titleSpan-font-letter-spacing: 15px;
+
+/*banner-super-discount*/
+$superDiscount-title-font:'Roboto', sans-serif;
+$superDiscount-title-font-weight: 300;
+$superDiscount-title-font-size: 55px;//84
+$superDiscount-title-font-line-height: 45px;//90
+$superDiscount-title-font-letter-spacing: -2px;
+
+$superDiscount-spanFirst-font-weight: 500;
+
+$superDiscount-spanSecond-font-size: 23px;//33
+$superDiscount-spanSecond-font-line-height: 29px;//39
+
+$superDiscount-percent-font-size: 85px;//172
+$superDiscount-percent-font-line-height: 126px;//178
+
+$superDiscount-text-font-weight: 400;
+$superDiscount-text-font-size: 9px;
+$superDiscount-text-font-line-height: 15px;
+$superDiscount-text-font-letter-spacing: 1px;
+
+// lables
+// lable-discount--circle
+$lable-circle-font:'Open Sans', sans-serif;
+$lable-circle-font-weight: 600;
+$lable-circle-font-size: 22px;
+$lable-circle-font-line-height: 26px;
+$lable-circle-font-letter-spacing: 1px;
+
+$lable-circle-text-font-size: 10px;
+$lable-circle-text-font-line-height: 14px;
 
 
 body{

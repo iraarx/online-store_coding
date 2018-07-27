@@ -1,4 +1,7 @@
 $main-background-color:#e7e7e7;
+$gallery-item-background-color:#e5e5e5;
+$header-responsive-color:#f6f6f6;
+
 /* font colors */
 $main-text-color:#464646;
 $main-links-color:#878787;
@@ -11,11 +14,50 @@ $dropdown-background:#fff;
 
 $sidebar-dot-color:#969696;
 $sidebar-line-color:#f8f8f8;
-
+// Lables
+// rectangle gray lable
 $lable-rectangle-color:#2d2d2d;
 $lable-rectangle-text-color: #fff;
+// circle purple lable
+$lable-circle-color:#f088a1;
+$lable-circle-text-color: #b26e7e;
 
+// sales banner
 $sales-banner-caption-color: #ffb61b;
+$sales-banner-bottom-text-color: #737373;
+$sales-banner-background-color: #080808;
+
+// banner-sunglasses
+$sunglasses-under-price-text-color:#b88870;
+$sunglasses-under-price-number-color:#494949;
+$sunglasses-collection-color:#666667;
+
+// summerCollection banner
+$summerCollection-year-color:#f6cb68;
+$summerCollection-title-orange-color:#fdda5c;
+$summerCollection-title-gray-color:#d4d2d2;
+$summerCollection-code-color:#d4d2d2;
+$summerCollection-background-color:#fff;
+
+// New arrivals banner
+$newArrivals-title-span-color:#97b1bf;
+
+//Men shoes banner
+$menShoes-title-color:#675b54;
+$menShoes-title-span-color:#b7aca6;
+
+// super-discount banner
+$superDiscount-text-color:#ffffff;
+$superDiscount-percent-color:#95f1f2;
+
+//footer
+$footer-background-color:#f5f5f5;
+$btn-scrollTop-color:#000;
+
+//hover
+$hover-product-background:#f2f2f2c7;
+$hover-product-color:#000;
+$banner-hover-color:#fbc0422b;
 
 $gray-dark-color:#444444;
 $gray-light-color:#7d7d7d;
@@ -24,3 +66,7 @@ $gray-light-color:#7d7d7d;
 $text-link-hover-color:#ef7c00;
 $btn-hover-text-color:#000;
 $menu-numbers-color:#ffb517;
+
+.bg--light-gray{
+    background-color: $header-responsive-color;
+}

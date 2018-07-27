@@ -1,0 +1,135 @@
+@include media-breakpoint-down(lg) {
+    
+  }
+
+@include media-breakpoint-down(xl) {
+    
+}
+
+@include media-breakpoint-down(md) {
+    
+    .container-flex__main{
+        flex-direction: column;
+    }
+    .cart{
+        margin-top: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        padding:20px;
+    }
+    
+    .sidebar{
+        order:0;
+        flex-direction: column;
+        position: relative;
+        &:before{
+            content: '';
+            display: none;
+        }
+        &__dots-list{
+            display: none;
+        }
+        &__nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__menu-colapse{
+            z-index: 10;
+            background-color: #fff;
+            opacity: 0.95;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top:0px;
+            display: none;
+        }
+        &__nav-list{
+            padding-bottom: 10px;
+        }
+        .icon.logo-big{
+            font-size:5px;
+            
+        }
+        &__menu-icon{
+            display: block;
+        }
+        
+    }
+    
+    .header{
+        
+        &__nav{
+            flex-wrap: wrap;
+        }
+        .header-menu{
+            
+            justify-content: space-around;
+            width:100%;
+            &__item{
+                &:hover:before{
+                    content: '';
+                    display: none;
+                    }
+            }
+        }
+        &__wrap-filters-search{
+            display: flex;
+            width: 100%;
+        }
+        &__advanced-filters{
+            flex:2;
+            display: block;
+            width: 100%;
+            margin:0;
+        }
+        &__search-form{
+            width: 50%;
+            flex:2;
+        }
+        &__search-form-input{
+            width:100%;
+        }
+        &__banner{
+            visibility: hidden;
+        }
+        
+    }
+
+    
+}
+
+@include media-breakpoint-down(sm) {
+    .header{
+        position: relative;
+        &__nav{
+            width:100%;
+            padding: 5px 0;
+            margin-bottom: 10px;
+            background-color: $header-responsive-color;
+            position: absolute;
+            z-index: 15;
+            display: none;
+        }
+        
+        .header-menu{
+            flex-direction: column;
+        }
+        &__icon-filter{
+            display: block;
+        }
+        &__colapse-menu{
+            display: none;
+        }
+    }
+    
+}
+
+
+.visible{
+    display: flex;
+}
+.hidden{
+    display: none;
+}

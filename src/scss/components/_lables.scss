@@ -8,6 +8,28 @@
         
     }
     &--circle{
-
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: $lable-circle-color;
+        color:$lable-circle-text-color;
+        padding: 15%;
+        width:78px;
+        height:78px;
+        border-radius: 50%;
+        @include font-type($lable-circle-font, 
+                            $lable-circle-font-size, 
+                            $lable-circle-font-line-height, 
+                            $lable-circle-font-letter-spacing, 
+                            $lable-circle-font-weight);
+        &__text{
+            @include font-type($lable-circle-font, 
+                            $lable-circle-text-font-size, 
+                            $lable-circle-text-font-line-height, 
+                            $lable-circle-font-letter-spacing, 
+                            $lable-circle-font-weight);
+        }
     }
 }

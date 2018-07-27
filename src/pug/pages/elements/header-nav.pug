@@ -1,8 +1,13 @@
+a.header__icon-filter(href="#")
+        i.btn--filter
+            .btn--filter__span
+            .btn--filter__span
+            .btn--filter__span
 nav.header__nav
     ul.header-menu
         // Menu item
         li.header-menu__item
-            a.header-menu__link(href="all.htm") All 
+            a.header-menu__link(href="#") All 
             // Dropdown menu
             .header-menu__dropdown-wrap
                 +dropdown_menu([
@@ -108,10 +113,10 @@ nav.header__nav
                         ]},
                 ])
                 .header-menu__banner
-                    +banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer Collection', '2018', '0852FASH')
+                    +banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer', 'Collection', '2018', '0852FASH')
         // Menu item
         li.header-menu__item
-            a.header-menu__link(href="all.htm") Man 
+            a.header-menu__link(href="#") Man 
             // Dropdown menu
             .header-menu__dropdown-wrap
                 +dropdown_menu([
@@ -217,10 +222,10 @@ nav.header__nav
                         ]},
                 ])
                 .header-menu__banner
-                    +banner-new-arrivals('img/banner-5.png', 'bag', 'New arrivals', '2015', '%5', 'additional discount')
+                    +banner-new-arrivals('img/banner-5.png', 'bag', 'New', 'arrivals', '2015', '%5', 'additional discount')
         // Menu item
         li.header-menu__item
-            a.header-menu__link(href="all.htm") Women 
+            a.header-menu__link(href="#") Women 
             // Dropdown menu
             .header-menu__dropdown-wrap
                 +dropdown_menu([
@@ -326,10 +331,10 @@ nav.header__nav
                         ]},
                 ])
                 .header-menu__banner
-                    +banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer Collection', '2018', '0852FASH')
+                    +banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer', 'Collection', '2018', '0852FASH')
         // Menu item
         li.header-menu__item
-            a.header-menu__link(href="all.htm") Home 
+            a.header-menu__link(href="#") Home 
             // Dropdown menu
             .header-menu__dropdown-wrap
                 +dropdown_menu([
@@ -435,10 +440,10 @@ nav.header__nav
                         ]},
                 ])
                 .header-menu__banner
-                    +banner-new-arrivals('img/banner-5.png', 'bag', 'New arrivals', '2015', '%5', 'additional discount')
+                    +banner-new-arrivals('img/banner-5.png', 'bag', 'New', 'arrivals', '2015', '%5', 'additional discount')
         // Menu item
         li.header-menu__item
-            a.header-menu__link(href="all.htm") Shoes 
+            a.header-menu__link(href="#") Shoes 
             // Dropdown menu
             .header-menu__dropdown-wrap
                 +dropdown_menu([
@@ -544,10 +549,10 @@ nav.header__nav
                         ]},
                 ])
                 .header-menu__banner
-                    +banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer Collection', '2018', '0852FASH')
+                    +banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer', 'Collection', '2018', '0852FASH')
         // Menu item
         li.header-menu__item
-            a.header-menu__link(href="all.htm") Bags 
+            a.header-menu__link(href="#") Bags 
             // Dropdown menu
             .header-menu__dropdown-wrap
                 +dropdown_menu([
@@ -653,10 +658,10 @@ nav.header__nav
                         ]},
                 ])
                 .header-menu__banner
-                    +banner-new-arrivals('img/banner-5.png', 'bag', 'New arrivals', '2015', '%5', 'additional discount')
+                    +banner-new-arrivals('img/banner-5.png', 'bag', 'New', 'arrivals', '2015', '%5', 'additional discount')
         // Menu item
         li.header-menu__item
-            a.header-menu__link(href="all.htm") Sale 
+            a.header-menu__link(href="#") Sale 
             // Dropdown menu
             .header-menu__dropdown-wrap
                 +dropdown_menu([
@@ -762,11 +767,12 @@ nav.header__nav
                         ]},
                 ])
                 .header-menu__banner
-                    +banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer Collection', '2018', '0852FASH')    
-    // Advanced filters button
-    a( class='header__advanced-filters btn--bordered-header', id='advancedFilters', href='link.html', rel='nofollow' ) Advance filters
-    // Search
-    form.header__search-form( method="get" )
-        input( class='header__search-form-input', type="search", name="search", placeholder="Search" )
-        button( class='header__search-form-submit', type="submit")
-            i.icon.search.header__search-form-icon    				
+                    +banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer', 'Collection', '2018', '0852FASH')    
+    .header__wrap-filters-search
+        // Advanced filters button
+        a( class='header__advanced-filters btn--bordered-header', id='advancedFilters', href='link.html', rel='nofollow' ) Advance filters
+        // Search
+        form.header__search-form( method="get" )
+            input( class='header__search-form-input', type="search", name="search", placeholder="Search" )
+            button( class='header__search-form-submit', type="submit")
+                i.icon.search.header__search-form-icon    				
