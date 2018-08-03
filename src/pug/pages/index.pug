@@ -4,6 +4,9 @@ extends ../layout/docwrapper
 append config
 	- var PageTitle = 'Home page'
 	- var MetaDesc = 'Home page e-commerce'
+	- var MetaRaiting = '10'
+	- var MetaAuthor = 'Iryna Beskor'
+	- var MetaRobots = 'index,follow'
 
 block content
 	//- include:markdown content/external_markdown.md
@@ -68,11 +71,11 @@ block content
 			.col-lg-12
 				+section-title('Our Sales')
 		.row
-			.col-lg-3.col-xl-3.col-md-12.col-sm-12
+			.col-lg-12.col-xl-3.col-md-12.col-sm-12
 				//- mixin sales__banner(imageUrl, imageAlt, year, persent, title, tiitleSpan, bottomText)
 				.gallery-sales__banner
 					+gallery-sales__banner('img/banner-2.png', '20% off Man and woman fassion collection', '2018', '20%', 'Man & Women', 'Fashion Collection', '*Terms and condition applied')
-			.col-lg-9.col-xl-9.col-md-12.col-sm-12
+			.col-lg-12.col-xl-9.col-md-12.col-sm-12
 				.gallery-sales__products
 					.row
 						.col-lg-3.col-md-4.col-sm-6.gallery-sales__item 
@@ -99,25 +102,29 @@ block content
 			.col-lg-12
 				+section-title('Advertisments')
 		.row
-			.col-lg-6
+			.col-lg-6.col-md-12.col-sm-12
 				//- banner-sunglasses(imageUrl, imageAlt, title, underPrice, collection)
 				+banner-sunglasses('img/banner-3.png', 'sunglasses', 'Sunglasses', 'Under', '$100', 'Summer Collection')
 				
-			.col-lg-3
+			.col-lg-3.col-md-6.col-sm-6
 				+banner-summer-collection('img/banner-4.png', 'summer collection', 'Summer', 'Collection', '2018', '0852FASH')
 
-			.col-lg-3
+			.col-lg-3.col-md-6.col-sm-6
 				//- banner-new-arrivals(imageUrl, imageAlt, title, year, persent, lableText)
 				+banner-new-arrivals('img/banner-5.png', 'bag', 'New', 'arrivals', '2015', '%5', 'additional discount')
 
-			.col-lg-6
+			.col-lg-6.col-md-6.col-sm-12
 				//- banner-men-shoes(imageUrl, imageAlt, title, titleSpan)
 				+banner-men-shoes('img/banner-6.png', 'meh shoes', 'Men shoes', 'collections')
 
-			.col-lg-6
+			.col-lg-6.col-md-6.col-sm-12
 				//- banner-super-discount(imageUrl, imageAlt, title, titleSpan1, titleSpan2, persent)
 				+banner-super-discount('img/banner-7.png', 'super discount weekends 45%', 'Super', 'Discount', 'Weekends', '45%')
-					
+		.row
+			.col-md-12
+				//-.block
+					p Text
+							
 	
 	
 		

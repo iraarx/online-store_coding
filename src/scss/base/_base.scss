@@ -6,5 +6,10 @@ button:focus{
 .gallery-products, .gallery-sales, .advertisements{
     margin-top: 30px;
 }
+@include media-breakpoint-down(sm){
+    .gallery-products, .gallery-sales, .advertisements{
+        margin-top: 15px;
+    }
+}
 
 

@@ -1,7 +1,7 @@
 footer.footer
-    .container
-        .row.align-items-center
-            .col-lg-5.col-md-12
+    .container-fluid
+        .row
+            .col-lg-5.col-md-6
                 .footer__logo-info-wrap
                     a( class='footer__logo icon logo-small', href='index.html', rel='nofollow' )
                 
@@ -13,11 +13,12 @@ footer.footer
                             |available, but the majority have suffered alteration in
                             br 
                             |some form, by injected humour
-            .col-lg-2.col-md-12
-                // Top button
-                a(href="#header").footer__top-button.btn--scrollTop
-                    i.btn--scrollTop__icon.icon.up-arrow
-                    p.btn--scrollTop__text Top
+            .col-lg-2.col-md-6
+                .footer__top-button-wrap
+                    // Top button
+                    a(href="#header").footer__top-button.btn--scrollTop
+                        i.btn--scrollTop__icon.icon.up-arrow
+                        p.btn--scrollTop__text Top
             .col-lg-5.col-md-12
                 // Social icons
                 .footer__social-icons.social-icons
@@ -37,4 +38,4 @@ footer.footer
                 // Copyright block
                 .footer__copyright-block
                     p.footer__copyright-text Awesome shop | multipurpose shopping html template
-                    p.footer__copyright-copyright Copyright:&copy; 0effortthemes.com	
+                    p.footer__copyright-copyright Copyright:&copy; coding:Iryna Bescorovaina, design:0effortthemes.	

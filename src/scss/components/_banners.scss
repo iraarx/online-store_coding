@@ -30,10 +30,12 @@
     position: relative;
     background-color: $main-background-color;
     display: flex;
-    height: 50vh;
+    min-height: 300px;
     align-items: center;
     margin-top: 15vh;
-    
+    &__img-wrap, &__caption-wrap{
+        padding: 5% 0;
+    }
     &__img-wrap{
         flex:6;
         display: flex;
@@ -45,6 +47,7 @@
     }
     &__img{
         width: 100%;
+        padding: 5% 0;
     }
     &__caption-wrap{
         flex:6;
@@ -54,6 +57,7 @@
     &__caption{
         display: flex;
         flex-direction: column;
+        padding-right:5%;
     }
     &__top-text{
         @include font-type($main-font,
@@ -107,7 +111,7 @@
         position: absolute;
         top:0px;
         left:0px;
-        height: auto;
+        height: auto!important;
         width: 100%;
     }
     
@@ -177,10 +181,6 @@
         color:$sales-banner-caption-color;
         margin-top: 22px;
         transition: all 0.6s ease-in;
-        // &:hover{
-        //     transform: translateX(10px); 
-        //     color:$sales-banner-caption-color;
-        // }
     }
     &__bottom-text{
         position: absolute;
@@ -195,7 +195,7 @@
         font-style: italic;
     }
 }
-
+// banner-summer-collection
 .banner-summer-collection{
     position: relative;
     display: flex;
@@ -206,10 +206,11 @@
     &__figcaption{
         position: absolute;
         background: $summerCollection-background-color;
-        padding: 8% 10%;
+        padding: 6% 10%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        
     }
     &__title{
         display: flex;
@@ -247,11 +248,9 @@
         margin-top: 20%;
     }
     
-    &__code-number{
-        margin-left: 5%;
-    }
 }
 
+// banner-new-arrivals
 .banner-new-arrivals{
     position: relative;
     display: flex;
@@ -293,6 +292,7 @@
     }
 }
 
+// banner-sunglasses
 .banner-sunglasses{
     position: relative;
     display: flex;
@@ -349,6 +349,7 @@
     }
 }
 
+// banner-sunglasses
 .banner-men-shoes{
     position: relative;
     display: flex;
@@ -394,6 +395,7 @@
     }
 }
 
+// banner-super-discount
 .banner-super-discount{
     position: relative;
     display: flex;
@@ -412,9 +414,11 @@
         display: flex;
         flex-direction: column;
         text-align: left;
+        width: 100%;
     }
     &__title-wrap{
         display: flex;
+        justify-content: space-between;
     }
     &__title{
         display: flex;

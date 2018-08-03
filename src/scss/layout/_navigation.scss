@@ -14,38 +14,29 @@
             
     &__item{
         padding: 20px 20px 20px 0px;
-        // display: flex;
-        // align-items: center;
-        &:after{
-            content: '';
-            display: inline-block;
-            vertical-align: bottom;
-            color:$menu-numbers-color;
-            }
-
-        &:nth-child(1):after{content: '100';}
-        &:nth-child(2):after{content: '150';}
-        &:nth-child(3):after{content: '245';}
-        &:nth-child(4):after{content: '80';}
-        &:nth-child(5):after{content: '60';}
-        &:nth-child(6):after{content: '120';}
-
-        &:hover:before{
-            content: '';
-            @include triangle(top, 12px, 12px,$dropdown-background);
-            position: absolute;
-            bottom: 30px;
-            transition: all 200ms ease;
-            z-index: 11;
-            }
+        
     }
-
+    
     &__link{
         text-transform: uppercase;
+        position: relative;
+        &:focus:after{
+            content: '';
+            @include triangle(top, 12px, 12px, $dropdown-background);
+            position: absolute;
+            bottom: -20px;
+            left:10%;
+            transition: all 200ms ease;
+            z-index: 20;
+        }
+    }
+    &__span{
+        display: inline-block;
+        vertical-align: bottom;
+        color:$menu-numbers-color;
     }
         
     &__dropdown-wrap{
-        display: none;
         position: absolute;
         left: 0;
         top: 85px;
@@ -55,7 +46,9 @@
         box-shadow:7px 48px 97px 31px rgba(231,231,231,0.92);
         transition: all 200ms ease;
         z-index: 10;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        display: flex;
+        visibility:hidden;
         }
 
     &__banner{
@@ -87,6 +80,9 @@
         
     }
     &__icon-filter{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
         display: none;
     }
     &__advanced-filters{

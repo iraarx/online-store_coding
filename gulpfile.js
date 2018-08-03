@@ -32,8 +32,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     plumber = require('gulp-plumber'),
     notify = require('gulp-notify'),
-    pug = require('gulp-pug'),
-    preservetime = require('gulp-preservetime');
+    pug = require('gulp-pug')
+    // preservetime = require('gulp-preservetime');
     
     
 
@@ -116,12 +116,14 @@ gulp.task('js', ['lint-js'], function() {
             // 'node_modules/smoothscroll-for-websites/SmoothScroll.js',
             // jquery
             'node_modules/jquery/dist/jquery.min.js',
+            // jquery-matchmedia
+            'node_modules/jquery-matchmedia\dist\jquery.matchMedia.polyfill.min.js',
             // jquery easing
             'node_modules/jquery.easing/jquery.easing.min.js',
             // owl carousel
             'node_modules/owl.carousel/dist/owl.carousel.min.js',
             // snap.svg
-            'node_modules/snapsvg/snap.svg-min.js',
+            'node_modules/snapsvg/dist/snap.svg-min.js',
             // fontawesome
             'node_modules/@fortawesome/fontawesome-free/js/fontawesome.js',
             // main scripts
@@ -146,11 +148,10 @@ gulp.task('lint-js', function() {
 });
 
 // Font awesome
-gulp.task('preservetime', function(){
+gulp.task('fonts', function() {
     return gulp
-        .src('src/fonts/*.{ttf,woff,woff2,eof,svg}')
-        .pipe(gulp.dest('dist/fonts'))
-        .pipe(preservetime());
+        .src('node_modules/@fortawesome/fontawesome-free/webfonts/*.{ttf,woff,woff2,eof,svg}')
+        .pipe(gulp.dest('dist/webfonts/'));
 });
 
 // Compresses images.
@@ -221,5 +222,5 @@ gulp.task('watch-js', ['js'], function(done) {
  * The main task.
  * ------------------------------------------------------------------------- */
 gulp.task('default', function(cb) {
-    sequence('reset', 'pug', 'sprites-svg', ['sass', 'img', 'js'], 'server', cb);
+    sequence('reset', 'pug', 'sprites-svg', ['sass', 'img', 'js'], 'fonts', 'server', cb);
 });

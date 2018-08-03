@@ -1,8 +1,13 @@
+// Main colors
+
 $main-background-color:#e7e7e7;
 $gallery-item-background-color:#e5e5e5;
 $header-responsive-color:#f6f6f6;
 
-/* font colors */
+$gray-dark-color:#444444;
+$gray-light-color:#7d7d7d;
+
+//text-color
 $main-text-color:#464646;
 $main-links-color:#878787;
 
@@ -14,6 +19,7 @@ $dropdown-background:#fff;
 
 $sidebar-dot-color:#969696;
 $sidebar-line-color:#f8f8f8;
+
 // Lables
 // rectangle gray lable
 $lable-rectangle-color:#2d2d2d;
@@ -22,6 +28,7 @@ $lable-rectangle-text-color: #fff;
 $lable-circle-color:#f088a1;
 $lable-circle-text-color: #b26e7e;
 
+//Banners
 // sales banner
 $sales-banner-caption-color: #ffb61b;
 $sales-banner-bottom-text-color: #737373;
@@ -46,27 +53,23 @@ $newArrivals-title-span-color:#97b1bf;
 $menShoes-title-color:#675b54;
 $menShoes-title-span-color:#b7aca6;
 
-// super-discount banner
+//super-discount banner
 $superDiscount-text-color:#ffffff;
 $superDiscount-percent-color:#95f1f2;
 
-//footer
+//Footer
 $footer-background-color:#f5f5f5;
 $btn-scrollTop-color:#000;
 
-//hover
+//Hover
 $hover-product-background:#f2f2f2c7;
 $hover-product-color:#000;
 $banner-hover-color:#fbc0422b;
-
-$gray-dark-color:#444444;
-$gray-light-color:#7d7d7d;
-
 
 $text-link-hover-color:#ef7c00;
 $btn-hover-text-color:#000;
 $menu-numbers-color:#ffb517;
 
-.bg--light-gray{
-    background-color: $header-responsive-color;
-}
+
+
+

@@ -9,33 +9,43 @@ html( lang="en" )
 			block title
 				//- Variable used in text via interpolation
 				| #{PageTitle}
-		
+		// META
 		meta( charset='utf-8' )
-		meta( http-equiv='X-UA-Compatible', content='IE=edge' )
 		meta( name='viewport', content='width=device-width, initial-scale=1.0' )
-		//- Meta description drawn from config file
-		meta( name='description', content=MetaDesc )
-				
+		// FAVICON
+		link( href='img/favicon.ico', rel='shortcut icon', type='image/x-icon' )
+		
+		// SEO
+		meta( name='Description', content=MetaDesc )
+		meta( name='Rating', content=MetaRaiting )
+		meta( name='Author', content=MetaAuthor )
+		meta( name='Robots', content=MetaRobots )
+
+		// CONFIG
+		meta( name='format-detection', content='telephone=no' )
+		meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+
+		// CSS
 		block stylesheets
 			link( href='css/styles.css', rel='stylesheet', type='text/css' )
-			//- link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.1.0/css/all.css', integrity='sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt', crossorigin='anonymous')
+			
 	
 	body
 		.container-fluid
 			.row
 				// Sidebar menu
-				.col-lg-2.col-xl-2.col-md-12.col-sm-12
+				.col-xl-2.col-lg-2.col-md-12.col-sm-12
 					aside.sidebar
 						include ../pages/elements/sidebar-nav.pug
 				// Header and main wrapper
-				.col-lg-10.col-xl-10.col-md-12.col-sm-12
-						.row
-							.col-lg-11.col-md-12.col-sm-6.col-xs-6
+				.col-xl-10.col-lg-10.col-md-12.col-sm-12
+						.row.bg--light-gray.margin-header--mobile
+							.col-lg-11.col-md-12.col-sm-6.col-6
 								// Header
 								header.header#header
 									include ../pages/elements/header-nav.pug
 							//Shopping-bag
-							.col-lg-1.col-md-12.col-sm-6.col-xs-6
+							.col-lg-1.col-md-12.col-sm-6.col-6
 								aside.cart
 									// Bag button
 									a(class='cart__link', id='cart', href='#', rel='nofollow' )
@@ -48,11 +58,11 @@ html( lang="en" )
 									//- Content here
 									block content
 			.row.bg--gray
-				.col-lg-9.offset-lg-2.offset-md-0.col-md-12
+				.col-xl-9.col-lg-9.offset-xl-2.offset-lg-2.col-md-12
 					// Footer
 					include ../pages/elements/footer.pug
 
-
+		// Scripts
 		script(src='js/scripts.min.js') 
 			
 			
