@@ -113,7 +113,7 @@ gulp.task('js', ['lint-js'], function() {
     return gulp
         .src([
              // smoothscroll
-            // 'node_modules/smoothscroll-for-websites/SmoothScroll.js',
+            'node_modules/smoothscroll-for-websites/SmoothScroll.js',
             // jquery
             'node_modules/jquery/dist/jquery.min.js',
             // jquery-matchmedia

@@ -325,17 +325,21 @@
             &__item{
                 position: relative;
                 display: flex;
+                transition: 0.6s ease-in-out;
                 &:before{
                     content: '+';
                     margin:0 10px;
                     color:$main-links-color;
                 }
-                &:active:before{
+                &--active:before{
                     content: '-';
+
                 }
                 &:hover{
-                    background:$main-background-color;
-                    color:#fff;
+                    cursor:pointer;
+                    //background:$main-background-color;
+                    //color:#fff;
+                    border: 1px solid $main-background-color;
                   }
                 &--active{
                     &:before{
@@ -391,6 +395,14 @@
                 margin-right: 10px;
                 margin-bottom: 2px;
             }
+            &--active:first-child:before{
+                content:'';
+                @include triangle(top, 5px, 5px, $menu-numbers-color);
+                display: inline-block;
+                vertical-align: baseline;
+                margin-right: 10px;
+                margin-bottom: 2px;
+            }
             &:nth-child(n+2){
                 display: none;
                 z-index:30;
@@ -398,7 +410,7 @@
         }
         
     }
-    
+        
     .main-slider{
         &__item{
             flex-direction: column;
@@ -673,25 +685,5 @@
 .hidden{
     display: none;
 }
-.header-menu__link--active{
-    color:green;
-}
 
 
-
-.red{background-color: red;}
-.green{background-color:green;}
-
-.block {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    background: gray;
-}
-
-.block-green {
-    background: green;
-}
-.show{
-    visibility: visible;
-}
