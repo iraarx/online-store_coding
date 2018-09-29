@@ -20,6 +20,9 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <!--  darken html when cart onclick-->
+    <div class="overlayBackgroundCartClick"></div>
+    <!-- main container  -->
     <div class="container-fluid">
       <div class="row">
         <!-- Sidebar menu-->
@@ -1617,7 +1620,71 @@
             <!--Shopping-bag-->
             <div class="col-lg-1 col-md-12 col-sm-6 col-6">
               <aside class="cart">
-                <!-- Bag button--><a class="cart__link" id="cart" href="#" rel="nofollow"><i class="icon shopping-bag cart__icon"><span class="cart__number">2	</span></i></a>
+                <!--.cart__overlay-->
+                <!-- Bag button--><a class="cart__link" id="cart" href="#" rel="nofollow"><i class="icon shopping-bag cart__icon"><span class="cart__number">2</span></i></a>
+                <div class="cart__content">
+                  <header class="cart__header">
+                    <h2 class="cart__title">Your cart</h2>
+                  </header>
+                  <ul class="cart__list">
+                    <li class="cart__list-item">
+                      <div class="cart-product">
+                        <div class="cart-product__img-wrapper"><a class="cart-product__img-link"><img class="cart-product__img" src="img/slider_5.png" alt="shoes"/></a></div>
+                        <div class="cart-product__description">
+                          <h3 class="cart-product__name">product name</h3>
+                          <ul class="cart-product__data-list">
+                            <li class="cart-product__data">size: 6</li>
+                            <li class="cart-product__data">color: red</li>
+                            <li class="cart-product__data">quantity: 1+</li>
+                            <li class="cart-product__data">price: $499.00</li>
+                          </ul>
+                        </div>
+                        <button class="cart-product__delete-button" name="deleteButton" type="button" value="delete"><i class="cart-product__delete-button-icon fas fa-times"></i></button>
+                      </div>
+                    </li>
+                    <li class="cart__list-item">
+                      <div class="cart-product">
+                        <div class="cart-product__img-wrapper"><a class="cart-product__img-link"><img class="cart-product__img" src="img/slider_6.png" alt="handwatch"/></a></div>
+                        <div class="cart-product__description">
+                          <h3 class="cart-product__name">product name</h3>
+                          <ul class="cart-product__data-list">
+                            <li class="cart-product__data">size: 6</li>
+                            <li class="cart-product__data">color: red</li>
+                            <li class="cart-product__data">quantity: 1+</li>
+                            <li class="cart-product__data">price: $499.00</li>
+                          </ul>
+                        </div>
+                        <button class="cart-product__delete-button" name="deleteButton" type="button" value="delete"><i class="cart-product__delete-button-icon fas fa-times"></i></button>
+                      </div>
+                    </li>
+                    <li class="cart__list-item">
+                      <div class="cart-product">
+                        <div class="cart-product__img-wrapper"><a class="cart-product__img-link"><img class="cart-product__img" src="img/slider_4.png" alt="bag"/></a></div>
+                        <div class="cart-product__description">
+                          <h3 class="cart-product__name">product name</h3>
+                          <ul class="cart-product__data-list">
+                            <li class="cart-product__data">size: 6</li>
+                            <li class="cart-product__data">color: red</li>
+                            <li class="cart-product__data">quantity: 1+</li>
+                            <li class="cart-product__data">price: $499.00</li>
+                          </ul>
+                        </div>
+                        <button class="cart-product__delete-button" name="deleteButton" type="button" value="delete"><i class="cart-product__delete-button-icon fas fa-times"></i></button>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="cart__subtotal-pricing">
+                    <p class="cart__data">Subtotal<span class="cart__data-span">$390</span></p>
+                    <p class="cart__data">Shipping<span class="cart__data-span">Free</span></p>
+                  </div>
+                  <div class="cart__promo-code">
+                    <form class="cart__form-promo-code" action="" metod="post">
+                      <input class="form-control cart__form-input" data-label="Please enter a valid promo code" type="text" name="promo-code" placeholder="Promo Code" pattern="" required>
+                      <input class="cart__form-submit btn--filled-dark-gray" type="submit" value="apply now">
+                    </form>
+                  </div>
+                  <footer class="cart__footer"><a class="cart__footer-button btn--bordered">Continue shopping</a><a class="cart__footer-button btn--filled-black">Add to cart</a></footer>
+                </div>
               </aside>
             </div>
           </div>
@@ -2014,9 +2081,6 @@
                         </figcaption>
                       </figure>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12"></div>
                   </div>
                 </section>
               </main>
