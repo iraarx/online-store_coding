@@ -1,4 +1,9 @@
 //reset for dots of owl-carousel plugin
+
+body{
+    position: relative;
+    
+}
 button:focus{
     outline:none!important;
 }

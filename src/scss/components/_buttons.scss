@@ -1,5 +1,4 @@
 .btn{
-    
     &--bordered{
         border:1px solid $button-border-color;
         padding: 10px;
@@ -35,6 +34,23 @@
             background-color: $text-link-hover-color;
             color:$btn-hover-text-color;
             border-color: $btn-hover-text-color;
+        }
+    }
+    &--filled-black{
+        @extend .btn--bordered;
+        background-color: $button-fill-black-color;
+        color:#fff;
+        border-color:#000;
+    }
+    &--filled-dark-gray{
+        @extend .btn--bordered;
+        background-color: $gray-dark-btn;
+        color:#fff;
+        border-color:$gray-dark-btn;
+        outline-offset: 0px!important;
+        font-size:12px;
+        &:focus{
+            outline-color: $text-link-hover-color;
         }
     }
     &--scrollTop{

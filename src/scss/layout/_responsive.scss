@@ -43,11 +43,33 @@
 
 }
 
-@include media-breakpoint-down(xl) {
-      
+@media (max-width: 1321px) { 
+    .header-menu__dropdown-wrap{
+        top: 95px;
+    }
+    .header-menu__link{
+        &:focus:after{
+            bottom: -28px;
+        }
+    }
 }
-  
+//xlarge devices - screen width equal to or greater than 1200px
+@include media-breakpoint-down(xl) {
+    
+}
 
+@media (max-width: 1115px) { 
+    .look-book-banner{
+        &__img-wrap{
+            flex:3;
+        }
+        &__caption-wrap{
+            flex:6;
+        }    
+    }
+    
+}
+//large devices - screen width equal to or greater than 992px
 @include media-breakpoint-down(lg) {
     .header-menu__banner{
         display: none;
@@ -60,6 +82,9 @@
             bottom: -30px;
             left:10%;
         }
+    }
+    .cart__content{
+        width:80vw;
     }
     .look-book-banner{
         &__img-wrap{
@@ -148,9 +173,11 @@
             line-height:$superDiscount-percent-font-line-height/1.3;
         }
         &__text{display: none;}
-    }    
+    }
+        
   }
 
+//medium devices - screen width equal to or greater than 768px  
 @include media-breakpoint-down(md) {
     
     .container-flex__main{
@@ -162,6 +189,10 @@
         justify-content: flex-end;
         align-items: baseline;
         padding:20px;
+    }
+    .cart__content{
+        width:100vw;
+        right:-15px;
     }
     
     .sidebar{
@@ -284,38 +315,20 @@
     }
 }
 
-@media (max-width: 1321px) { 
-    .header-menu__dropdown-wrap{
-        top: 95px;
-    }
-    .header-menu__link{
-        &:focus:after{
-            bottom: -28px;
-        }
-    }
-}
-
-@media (max-width: 1115px) { 
-    .look-book-banner{
-        &__img-wrap{
-            flex:3;
-        }
-        &__caption-wrap{
-            flex:6;
-        }    
-    }
-}
+//small devices - screen width equal to or greater than 576px
 @include media-breakpoint-down(sm) {
     
     .header{
+        
         &__nav{
             width:182%;
             padding-right: 10px;
             margin-bottom: 10px;
             background-color: rgba(255, 255, 255, 0.966);
             position: absolute;
-            z-index: 15;
+            z-index: 22;
             display: none;
+            align-self:center;
         }
         &__advanced-filters{
             margin-left: 0px;
@@ -362,6 +375,7 @@
         }
         &__icon-filter{
             display: block;
+            transform: translateY(-25%);
         }
         &__colapse-menu{
             display: none;
@@ -410,7 +424,9 @@
         }
         
     }
-        
+    .cart__content{
+        right:-30px;
+    }
     .main-slider{
         &__item{
             flex-direction: column;
@@ -585,7 +601,29 @@
         }
     }    
 }
+
+//extra small devices - screen width less than 576px 
 @include media-breakpoint-down(xs) {
+    .header__icon-filter{
+        transform: translateY(13%);
+    }  
+    .cart-product{
+        flex-direction: column;
+        &__img-wrapper{
+            //max-width:250px;
+            flex:1;
+            width:100%;
+        }
+        &__description{
+            flex:2;
+            margin-top:10px;
+            margin-left: 0px;
+        }
+        &__delete-button{
+            bottom:0px;
+            right:0px;
+        }
+    }   
     .banner-new-arrivals{
         margin-top: 20px;
     }
@@ -619,7 +657,12 @@
         }
     }    
 }
-@media (max-width: 503px) { 
+@media (max-width: 503px) {
+    .cart__footer{
+        &-button{
+            width:50%;
+       }
+    } 
     .look-book-banner{
         &__caption-wrap{
             top: 10%;
@@ -635,7 +678,19 @@
     
 }
 
-@media (max-width: 406px) { 
+@media (max-width: 406px) {
+    .header__icon-filter{
+        transform: translateY(25%);
+    }
+    .cart__footer{
+        flex-direction: column;
+        &-button{
+            width:100%;
+        &:nth-child(1){
+            margin-bottom: 10px;
+        }
+       }
+    } 
     .banner-sunglasses{
         &__collection{
             font-size: $sunglasses-collection-font-size/1.2;
@@ -678,7 +733,7 @@
     
 }
 
-
+//visible and hidden styles
 .visible{
     display: flex;
 }

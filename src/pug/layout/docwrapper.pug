@@ -31,6 +31,9 @@ html( lang="en" )
 			
 	
 	body
+		//  darken html when cart onclick
+		.overlayBackgroundCartClick
+		// main container  
 		.container-fluid
 			.row
 				// Sidebar menu
@@ -47,10 +50,36 @@ html( lang="en" )
 							//Shopping-bag
 							.col-lg-1.col-md-12.col-sm-6.col-6
 								aside.cart
+									//.cart__overlay
 									// Bag button
 									a(class='cart__link', id='cart', href='#', rel='nofollow' )
 										i.icon.shopping-bag.cart__icon
-											span.cart__number 2	
+											span.cart__number 2
+									.cart__content
+										header.cart__header
+											h2.cart__title Your cart
+										ul.cart__list
+											li.cart__list-item
+												//-cart-product-item(imageUrl,imageAlt,name,size,color,quantity,price)
+												+cart-product-item('img/slider_5.png', 'shoes', 'product name', '6', 'red', '1+', '$499.00')
+											li.cart__list-item
+												//-cart-product-item(imageUrl,imageAlt,name,size,color,quantity,price)
+												+cart-product-item('img/slider_6.png', 'handwatch', 'product name', '6', 'red', '1+', '$499.00')
+											li.cart__list-item
+												//-cart-product-item(imageUrl,imageAlt,name,size,color,quantity,price)
+												+cart-product-item('img/slider_4.png', 'bag', 'product name', '6', 'red', '1+', '$499.00')
+										.cart__subtotal-pricing
+											p.cart__data Subtotal
+												span.cart__data-span $390
+											p.cart__data Shipping
+												span.cart__data-span Free
+										.cart__promo-code
+											form.cart__form-promo-code(action="", metod="post")
+												input.form-control.cart__form-input(data-label="Please enter a valid promo code", type="text", name="promo-code", placeholder="Promo Code", pattern="", required)
+												input.cart__form-submit.btn--filled-dark-gray(type="submit", value="apply now")
+										footer.cart__footer
+											a.cart__footer-button.btn--bordered Continue shopping
+											a.cart__footer-button.btn--filled-black Add to cart
 						.row
 							.col-lg-11.col-md-12
 								// Main 

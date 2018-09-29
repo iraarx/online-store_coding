@@ -183,6 +183,25 @@ $lable-circle-font-letter-spacing: 1px;
 $lable-circle-text-font-size: 10px;
 $lable-circle-text-font-line-height: 14px;
 
+// Cart content
+$cart-title-font:'Old Standard TT', serif;
+$cart-title-font-weight: 400;
+$cart-title-font-size: 30px;
+$cart-title-font-line-height: 35px;
+$cart-title-font-letter-spacing: 1px;
+
+$cart-product-title-font:'Roboto', sans-serif;
+$cart-product-title-font-weight: 500;
+$cart-product-title-font-size: 15px;
+$cart-product-title-font-line-height: 20px;
+$cart-product-title-font-letter-spacing: 1px;
+
+$cart-subtotal-pricing-font:'Roboto', sans-serif;
+$cart-subtotal-pricing-font-weight: 400;
+$cart-subtotal-pricing-font-size: 18px;
+$cart-subtotal-pricing-font-line-height: 40px;
+$cart-subtotal-pricing-font-letter-spacing: 1px;
+
 
 body{
     color: $main-text-color;

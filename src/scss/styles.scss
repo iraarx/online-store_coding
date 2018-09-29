@@ -13,12 +13,6 @@
 @import 'base/colors';
 @import 'base/typography';
 
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/footer';
-@import 'layout/sidebar-menu';
-@import 'layout/forms';
-
 @import 'components/buttons';
 @import 'components/hover';
 @import 'components/lables';
@@ -27,6 +21,12 @@
 @import 'components/banners';
 @import 'components/media';
 @import 'components/cover';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/footer';
+@import 'layout/sidebar-menu';
+@import 'layout/forms';
 
 @import 'sprites/sprites';
 

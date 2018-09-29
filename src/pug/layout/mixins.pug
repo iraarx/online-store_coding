@@ -180,4 +180,18 @@ mixin banner-super-discount(imageUrl, imageAlt, title, titleSpan1, titleSpan2, p
 				br 
 				|have suffered alteration in some form
 		
-
+mixin cart-product-item(imageUrl,imageAlt,name,size,color,quantity,price)
+	.cart-product
+		.cart-product__img-wrapper
+			a.cart-product__img-link
+				img.cart-product__img(src=imageUrl, alt=imageAlt)
+		.cart-product__description
+			h3.cart-product__name= name
+			ul.cart-product__data-list
+				li.cart-product__data="size: " + size
+				li.cart-product__data="color: " + color
+				li.cart-product__data="quantity: " + quantity
+				li.cart-product__data="price: " + price
+		button.cart-product__delete-button(name="deleteButton", type="button", value="delete")
+			i.cart-product__delete-button-icon.fas.fa-times
+			

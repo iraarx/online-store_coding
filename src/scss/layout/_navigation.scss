@@ -1,3 +1,4 @@
+// HEADER -nav
 .header__nav{
     display: flex;
     position: relative;
@@ -32,8 +33,8 @@
             transition: all 200ms ease;
             z-index: 20;
         }
-        
     }
+    
     &__span{
         display: inline-block;
         vertical-align: bottom;
@@ -49,7 +50,7 @@
         background:$dropdown-background;
         box-shadow:7px 48px 97px 31px rgba(231,231,231,0.92);
         transition: all 200ms ease;
-        z-index: 10;
+        z-index: 25;
         flex-wrap: nowrap;
         display: flex;
         visibility:hidden;
@@ -78,13 +79,11 @@
 }
 
 .header{
-    
     &__colapse-menu{
         display: flex;
         
     }
     &__icon-filter{
-        margin-top: 10px;
         display: flex;
         justify-content: center;
         display: none;
@@ -119,17 +118,25 @@
     }
 }
 
+// CART
 .cart{
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: baseline;
     padding:10px;
-    z-index: 20;
+    position: relative;
+    height:100%;
+    
     &__icon{
         position: relative;
         display: flex;
-        justify-content: center
+        justify-content: center;
+        z-index: 20;
+    }
+    &__header{
+        padding: 40px 30px;
+        margin-top: -10px;
     }
     &__number{
         position: absolute;
@@ -147,7 +154,145 @@
             background-color:$text-link-hover-color;
         }
     }
+    &__content{
+        overflow: hidden;
+        background-color: $cart-content-background-color;
+        position:absolute;
+        top:-20px;
+        right:-15px;
+        z-index: 19;
+        width:50vw;
+        display: none;
+    }
+    &__title{
+        text-transform: uppercase;
+        @include font-type($cart-title-font,
+                        $cart-title-font-size,
+                        $cart-title-font-line-height,
+                        $cart-title-font-letter-spacing,
+                        $cart-title-font-weight);
+    }
+    &__list{
+        padding-bottom: 80px;
+    }
+    &__list-item{
+        padding: 30px 60px 30px 40px;
+    }
+    &__list-item, &__subtotal-pricing, &__promo-code, &__footer{
+        border-top: 1px solid $main-background-color;
+    }
+    &__subtotal-pricing{
+        padding: 30px 60px 30px 40px;
+    }
+    &__data{
+        display:flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        @include font-type($cart-subtotal-pricing-font,
+                        $cart-subtotal-pricing-font-size,
+                        $cart-subtotal-pricing-font-line-height,
+                        $cart-subtotal-pricing-font-letter-spacing,
+                        $cart-subtotal-pricing-font-weight);
+    }
+    &__promo-code{
+        padding: 60px 60px 60px 40px;
+    }
+    &__form-promo-code{
+        display:flex;
+        flex-wrap:nowrap;
+    }
+    &__form-input{
+        position:relative;
+        @extend .header__search-form-input;
+        height:50px;
+        width:100%;
+    }
+    &__form-submit{
+        position: absolute;
+        align-self: flex-end;
+        right:0px;
+        height:50px;
+        display:inline-block;
+        transform:translate(-50%);
+    }
+    &__footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 60px 60px 40px;
+        &-button{
+            
+            width:45%;
+            font-size:13px;
+            padding:25px 10px;
+       }
+    }
 }
+//cart product item in cart content
+.cart-product{
+    display: flex;
+    color:$main-text-color;
+    position:relative;
+    &__img-wrapper{
+        flex:3;
+    }
+    &__img{
+        width:100%;
+        height:auto;
+        background-color: $main-background-color;
+    }
+    &__description{
+        flex:4;
+        margin-left: 30px;
+    }
+    &__name{
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        @include font-type($cart-product-title-font,
+                        $cart-product-title-font-size,
+                        $cart-product-title-font-line-height,
+                        $cart-product-title-font-letter-spacing,
+                        $cart-product-title-font-weight);
+    }
+    &__data{
+        text-transform: uppercase;
+        margin-top: 15px;
+    }
+    &__delete-button{
+        position:absolute;
+        top:0px;
+        right:0px;
+        background-color:$main-background-color;
+        border:none;
+        width:25px;
+        height:25px;
+        display: flex;
+        justify-content: center;
+        transition:0.3s ease-in;  
+        &:hover{
+            background-color: $text-link-hover-color;
+            .cart-product__delete-button-icon{
+                color:black;
+            }
+        }   
+    }  
+    &__delete-button-icon{
+        padding: 5px;
+        color:$gray-light-color;
+    }
+    
+}
+// overlay layer when Cart click
+.overlayBackgroundCartClick{
+    background-color:black;
+    width: 100vw;
+    z-index: 19;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0.5;
+    display:none;
+}
+
 
 
 
